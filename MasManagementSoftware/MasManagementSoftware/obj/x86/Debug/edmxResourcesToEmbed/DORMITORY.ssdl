@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DORMITORYModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="DORMITORYModelStoreContainer">
+    <EntitySet Name="DepartmentInfo" EntityType="DORMITORYModel.Store.DepartmentInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DipositMoneyDetail" EntityType="DORMITORYModel.Store.DipositMoneyDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ExpenditureDetail" EntityType="DORMITORYModel.Store.ExpenditureDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GenderInfo" EntityType="DORMITORYModel.Store.GenderInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MilInfoDetail" EntityType="DORMITORYModel.Store.MilInfoDetail" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PurposeInfo" EntityType="DORMITORYModel.Store.PurposeInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SemisterInfo" EntityType="DORMITORYModel.Store.SemisterInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ShiftInfo" EntityType="DORMITORYModel.Store.ShiftInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="StudentInformation" EntityType="DORMITORYModel.Store.StudentInformation" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="DORMITORYModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_DipositMoneyDetail_PurposeInfo" Association="DORMITORYModel.Store.FK_DipositMoneyDetail_PurposeInfo">
+      <End Role="PurposeInfo" EntitySet="PurposeInfo" />
+      <End Role="DipositMoneyDetail" EntitySet="DipositMoneyDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DipositMoneyDetail_StudentInformation" Association="DORMITORYModel.Store.FK_DipositMoneyDetail_StudentInformation">
+      <End Role="StudentInformation" EntitySet="StudentInformation" />
+      <End Role="DipositMoneyDetail" EntitySet="DipositMoneyDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DipositMoneyDetail_StudentInformation1" Association="DORMITORYModel.Store.FK_DipositMoneyDetail_StudentInformation1">
+      <End Role="StudentInformation" EntitySet="StudentInformation" />
+      <End Role="DipositMoneyDetail" EntitySet="DipositMoneyDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ExpenditurePaid_StudentInformation" Association="DORMITORYModel.Store.FK_ExpenditurePaid_StudentInformation">
+      <End Role="StudentInformation" EntitySet="StudentInformation" />
+      <End Role="ExpenditureDetail" EntitySet="ExpenditureDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MilInfoDetail_StudentInformation" Association="DORMITORYModel.Store.FK_MilInfoDetail_StudentInformation">
+      <End Role="StudentInformation" EntitySet="StudentInformation" />
+      <End Role="MilInfoDetail" EntitySet="MilInfoDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentInformation_DepartmentInfo" Association="DORMITORYModel.Store.FK_StudentInformation_DepartmentInfo">
+      <End Role="DepartmentInfo" EntitySet="DepartmentInfo" />
+      <End Role="StudentInformation" EntitySet="StudentInformation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentInformation_GenderInfo" Association="DORMITORYModel.Store.FK_StudentInformation_GenderInfo">
+      <End Role="GenderInfo" EntitySet="GenderInfo" />
+      <End Role="StudentInformation" EntitySet="StudentInformation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentInformation_SemisterInfo" Association="DORMITORYModel.Store.FK_StudentInformation_SemisterInfo">
+      <End Role="SemisterInfo" EntitySet="SemisterInfo" />
+      <End Role="StudentInformation" EntitySet="StudentInformation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentInformation_ShiftInfo" Association="DORMITORYModel.Store.FK_StudentInformation_ShiftInfo">
+      <End Role="ShiftInfo" EntitySet="ShiftInfo" />
+      <End Role="StudentInformation" EntitySet="StudentInformation" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="DepartmentInfo">
+    <Key>
+      <PropertyRef Name="DepartmentId" />
+    </Key>
+    <Property Name="DepartmentId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DepartmentName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DipositMoneyDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="date" />
+    <Property Name="GiverId" Type="int" />
+    <Property Name="ReciverId" Type="int" />
+    <Property Name="PurposeId" Type="int" />
+    <Property Name="Money" Type="money" />
+    <Property Name="Credit_Money" Type="money" />
+  </EntityType>
+  <EntityType Name="ExpenditureDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="date" />
+    <Property Name="StudentId" Type="int" />
+    <Property Name="WhichOneName" Type="varchar" MaxLength="250" />
+    <Property Name="ExpansesName" Type="varchar" MaxLength="50" />
+    <Property Name="GivenMoney" Type="money" />
+    <Property Name="ExpansesMoney" Type="money" />
+    <Property Name="ReturnMoney" Type="money" />
+  </EntityType>
+  <EntityType Name="GenderInfo">
+    <Key>
+      <PropertyRef Name="GenderId" />
+    </Key>
+    <Property Name="GenderId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GenderName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="MilInfoDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="date" />
+    <Property Name="StudentId" Type="int" />
+    <Property Name="Mil" Type="int" />
+  </EntityType>
+  <EntityType Name="PurposeInfo">
+    <Key>
+      <PropertyRef Name="PurposeId" />
+    </Key>
+    <Property Name="PurposeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PurposeName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SemisterInfo">
+    <Key>
+      <PropertyRef Name="SemisterId" />
+    </Key>
+    <Property Name="SemisterId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SemisterName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ShiftInfo">
+    <Key>
+      <PropertyRef Name="ShiftId" />
+    </Key>
+    <Property Name="ShiftId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ShiftName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="StudentInformation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" MaxLength="32" />
+    <Property Name="Roll" Type="int" />
+    <Property Name="Registration" Type="int" />
+    <Property Name="SemisterId" Type="int" />
+    <Property Name="ShiftId" Type="int" />
+    <Property Name="DepartmentId" Type="int" />
+    <Property Name="GenderId" Type="int" />
+    <Property Name="Address" Type="varchar" MaxLength="50" />
+    <Property Name="Phone" Type="int" />
+    <Property Name="DateOfBirth" Type="date" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_DipositMoneyDetail_PurposeInfo">
+    <End Role="PurposeInfo" Type="DORMITORYModel.Store.PurposeInfo" Multiplicity="0..1" />
+    <End Role="DipositMoneyDetail" Type="DORMITORYModel.Store.DipositMoneyDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PurposeInfo">
+        <PropertyRef Name="PurposeId" />
+      </Principal>
+      <Dependent Role="DipositMoneyDetail">
+        <PropertyRef Name="PurposeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DipositMoneyDetail_StudentInformation">
+    <End Role="StudentInformation" Type="DORMITORYModel.Store.StudentInformation" Multiplicity="0..1" />
+    <End Role="DipositMoneyDetail" Type="DORMITORYModel.Store.DipositMoneyDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StudentInformation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DipositMoneyDetail">
+        <PropertyRef Name="GiverId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DipositMoneyDetail_StudentInformation1">
+    <End Role="StudentInformation" Type="DORMITORYModel.Store.StudentInformation" Multiplicity="0..1" />
+    <End Role="DipositMoneyDetail" Type="DORMITORYModel.Store.DipositMoneyDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StudentInformation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DipositMoneyDetail">
+        <PropertyRef Name="ReciverId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExpenditurePaid_StudentInformation">
+    <End Role="StudentInformation" Type="DORMITORYModel.Store.StudentInformation" Multiplicity="0..1" />
+    <End Role="ExpenditureDetail" Type="DORMITORYModel.Store.ExpenditureDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StudentInformation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ExpenditureDetail">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MilInfoDetail_StudentInformation">
+    <End Role="StudentInformation" Type="DORMITORYModel.Store.StudentInformation" Multiplicity="0..1" />
+    <End Role="MilInfoDetail" Type="DORMITORYModel.Store.MilInfoDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StudentInformation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="MilInfoDetail">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentInformation_DepartmentInfo">
+    <End Role="DepartmentInfo" Type="DORMITORYModel.Store.DepartmentInfo" Multiplicity="0..1" />
+    <End Role="StudentInformation" Type="DORMITORYModel.Store.StudentInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DepartmentInfo">
+        <PropertyRef Name="DepartmentId" />
+      </Principal>
+      <Dependent Role="StudentInformation">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentInformation_GenderInfo">
+    <End Role="GenderInfo" Type="DORMITORYModel.Store.GenderInfo" Multiplicity="0..1" />
+    <End Role="StudentInformation" Type="DORMITORYModel.Store.StudentInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GenderInfo">
+        <PropertyRef Name="GenderId" />
+      </Principal>
+      <Dependent Role="StudentInformation">
+        <PropertyRef Name="GenderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentInformation_SemisterInfo">
+    <End Role="SemisterInfo" Type="DORMITORYModel.Store.SemisterInfo" Multiplicity="0..1" />
+    <End Role="StudentInformation" Type="DORMITORYModel.Store.StudentInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SemisterInfo">
+        <PropertyRef Name="SemisterId" />
+      </Principal>
+      <Dependent Role="StudentInformation">
+        <PropertyRef Name="SemisterId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentInformation_ShiftInfo">
+    <End Role="ShiftInfo" Type="DORMITORYModel.Store.ShiftInfo" Multiplicity="0..1" />
+    <End Role="StudentInformation" Type="DORMITORYModel.Store.StudentInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ShiftInfo">
+        <PropertyRef Name="ShiftId" />
+      </Principal>
+      <Dependent Role="StudentInformation">
+        <PropertyRef Name="ShiftId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SEMESTER" Type="int" Mode="In" />
+    <Parameter Name="SHIFT" Type="int" Mode="In" />
+    <Parameter Name="DEPARTMENT" Type="int" Mode="In" />
+    <Parameter Name="GENDER" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SDATE" Type="date" Mode="In" />
+    <Parameter Name="EDATE" Type="date" Mode="In" />
+    <Parameter Name="NAME" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_DAYANDRICEVERWISESUMMARY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="STARTDATE" Type="date" Mode="In" />
+    <Parameter Name="ENDDATE" Type="date" Mode="In" />
+    <Parameter Name="RICEVERNAME" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_DAYBYDAYTOTALAMOUNT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="STARTDATE" Type="date" Mode="In" />
+    <Parameter Name="ENDDATE" Type="date" Mode="In" />
+  </Function>
+  <Function Name="SP_DAYWISEMILSUMMARY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TODAY" Type="date" Mode="In" />
+    <Parameter Name="TOMORROW" Type="date" Mode="In" />
+  </Function>
+  <Function Name="SP_DEPARTMENT_WISE_SUMMARY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="DEPARTMENT" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_EXPANSESDAYANDNAMEWISE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SDATE" Type="date" Mode="In" />
+    <Parameter Name="EDATE" Type="date" Mode="In" />
+    <Parameter Name="NAME" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_EXPANSESDAYWISEDISPLAY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SDATE" Type="date" Mode="In" />
+    <Parameter Name="EDATE" Type="date" Mode="In" />
+  </Function>
+  <Function Name="SP_EXPANSESDISPLAY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_GENDER_DEPARTMENT_WISE_SUMMARY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GENDER" Type="int" Mode="In" />
+    <Parameter Name="DEPARTMENT" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_GENDER_WISE_SUMAMRY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GENDER" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_GIVERANDDAYWISESUMMYDISPLAY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="STARTDATE" Type="date" Mode="In" />
+    <Parameter Name="ENDDATE" Type="date" Mode="In" />
+    <Parameter Name="GIVERNAME" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_GRIDVIEWDIPOSIT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_GRIDVIEWDISPLAY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_LAST_TOTAL_AMOUNT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SDATE" Type="date" Mode="In" />
+    <Parameter Name="EDATE" Type="date" Mode="In" />
+  </Function>
+  <Function Name="SP_LAST_TOTAL_AMOUNT_DAY_WISE_SYMMARY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SDATE" Type="date" Mode="In" />
+    <Parameter Name="EDATE" Type="date" Mode="In" />
+  </Function>
+  <Function Name="SP_MILDISPLAY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_NAMEANDDATEWISEMILSUMMARY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TODAY" Type="date" Mode="In" />
+    <Parameter Name="TOMORROW" Type="date" Mode="In" />
+    <Parameter Name="STUDENTNAME" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_NAMEANDDAYWISEDIPOSITDETAIL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SDATE" Type="date" Mode="In" />
+    <Parameter Name="EDATE" Type="date" Mode="In" />
+    <Parameter Name="NAME" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_NAMEANDDAYWISEMILDETAIL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SDATE" Type="date" Mode="In" />
+    <Parameter Name="EDATE" Type="date" Mode="In" />
+    <Parameter Name="NAME" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_NAMEWISEMILSUMMAY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="STUDENTNAME" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_PURPOSEANDDAYWISEDETAIL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SDATE" Type="date" Mode="In" />
+    <Parameter Name="EDATE" Type="date" Mode="In" />
+    <Parameter Name="PURPOSE" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SP_REPORTGIVERANDRICEVERWISE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GIVERID" Type="int" Mode="In" />
+    <Parameter Name="RICEVERID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_SEMESTER_DEPARTMENT_WISE_SUMMAY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SEMESTER" Type="int" Mode="In" />
+    <Parameter Name="DEPARTMENT" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_SEMESTER_GENDER_WISE_SUMMARY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GENDER" Type="int" Mode="In" />
+    <Parameter Name="SEMESTER" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_SEMESTER_WISE_SUMMARY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SEMSETER" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_SHIFT_DEPARTMENT_WISE_SUMMAY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SHIFT" Type="int" Mode="In" />
+    <Parameter Name="DEPARTMENT" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_SHIFT_GENDER_WISE_SUMMARY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GENDER" Type="int" Mode="In" />
+    <Parameter Name="SHIFT" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_SHIFT_SEMESTER_WISE_DETAIL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SEMSETER" Type="int" Mode="In" />
+    <Parameter Name="SHIFT" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_SHIFT_WISE_SUMMAY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SHIFT" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_SHOWMILDAYWISE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SDATE" Type="date" Mode="In" />
+    <Parameter Name="EDATE" Type="date" Mode="In" />
+  </Function>
+  <Function Name="SP_TOTALAMOUNTGRIDVIEW" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_TOTALEXPANSESDAYWISE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SDATE" Type="date" Mode="In" />
+    <Parameter Name="EDATE" Type="date" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_WITHDRAWGRIDVIEW" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_XXXXXXXXXXXXXXXXXXX" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+</Schema>

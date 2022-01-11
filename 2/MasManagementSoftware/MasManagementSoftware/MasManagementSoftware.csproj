@@ -1,0 +1,650 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7811C421-DA1E-415F-A6FC-7B38D704B3B8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MasManagementSoftware</RootNamespace>
+    <AssemblyName>A.R Hall</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>93100F37525F32609035C5FB954B3EF02F8D2315</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>MasManagementSoftware_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.TemplateEngine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Viewing.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddDepartmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDepartmentForm.Designer.cs">
+      <DependentUpon>AddDepartmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddStudentInformatio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStudentInformatio.Designer.cs">
+      <DependentUpon>AddStudentInformatio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CountMilForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CountMilForm.Designer.cs">
+      <DependentUpon>CountMilForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DayAndGiverWiseSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DayAndGiverWiseSummary.Designer.cs">
+      <DependentUpon>DayAndGiverWiseSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DayAndNameWiseExpansesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DayAndNameWiseExpansesForm.Designer.cs">
+      <DependentUpon>DayAndNameWiseExpansesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DayAndRiceverWiseSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DayAndRiceverWiseSummary.Designer.cs">
+      <DependentUpon>DayAndRiceverWiseSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DayByDayTotalAmountcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DayByDayTotalAmountcs.Designer.cs">
+      <DependentUpon>DayByDayTotalAmountcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DayWiseExpansesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DayWiseExpansesForm.Designer.cs">
+      <DependentUpon>DayWiseExpansesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DayWiseMilSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DayWiseMilSummary.Designer.cs">
+      <DependentUpon>DayWiseMilSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentAndGenderWiseDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepartmentAndGenderWiseDetailForm.Designer.cs">
+      <DependentUpon>DepartmentAndGenderWiseDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentWiseDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepartmentWiseDetailForm.Designer.cs">
+      <DependentUpon>DepartmentWiseDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DipositFormcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DipositFormcs.Designer.cs">
+      <DependentUpon>DipositFormcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DORMITORY.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DORMITORY.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DORMITORYDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DORMITORYDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DORMITORYDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DORMITORYDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DORMITORYDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DORMITORYDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ExpansesPaidForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExpansesPaidForm.Designer.cs">
+      <DependentUpon>ExpansesPaidForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenderAndShiftForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenderAndShiftForm.Designer.cs">
+      <DependentUpon>GenderAndShiftForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenderWiseDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenderWiseDetailForm.Designer.cs">
+      <DependentUpon>GenderWiseDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetMilDisplay.cs" />
+    <Compile Include="GiveAndRicevedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiveAndRicevedForm.Designer.cs">
+      <DependentUpon>GiveAndRicevedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager.cs" />
+    <Compile Include="MilRateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MilRateForm.Designer.cs">
+      <DependentUpon>MilRateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoneyWithdrawForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoneyWithdrawForm.Designer.cs">
+      <DependentUpon>MoneyWithdrawForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MotherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MotherForm.Designer.cs">
+      <DependentUpon>MotherForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NameAndDayWiseMilSummaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NameAndDayWiseMilSummaryForm.Designer.cs">
+      <DependentUpon>NameAndDayWiseMilSummaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rpt_DayWiseExpensesDetail.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_DayWiseExpensesDetail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT_DayWiseExpensesReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT_DayWiseExpensesReportForm.Designer.cs">
+      <DependentUpon>RPT_DayWiseExpensesReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rpt_DayWiseMilReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_DayWiseMilReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RPT_DayWiseMilReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT_DayWiseMilReportForm.Designer.cs">
+      <DependentUpon>RPT_DayWiseMilReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT_NameAndDayWisMilDetailReportViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT_NameAndDayWisMilDetailReportViewerForm.Designer.cs">
+      <DependentUpon>RPT_NameAndDayWisMilDetailReportViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rpt_NameAndDayWiseSummaryReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_NameAndDayWiseSummaryReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NameWiseMilSummaryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NameWiseMilSummaryForm.Designer.cs">
+      <DependentUpon>NameWiseMilSummaryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurposeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurposeForm.Designer.cs">
+      <DependentUpon>PurposeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PurposeWiseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurposeWiseForm.Designer.cs">
+      <DependentUpon>PurposeWiseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT_ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT_ReportForm.Designer.cs">
+      <DependentUpon>RPT_ReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rpt_StudentInforReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_StudentInforReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SemesterAndDepartmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SemesterAndDepartmentForm.Designer.cs">
+      <DependentUpon>SemesterAndDepartmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SemesterAndGenderform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SemesterAndGenderform.Designer.cs">
+      <DependentUpon>SemesterAndGenderform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SemesterAndShiftForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SemesterAndShiftForm.Designer.cs">
+      <DependentUpon>SemesterAndShiftForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SemesterShiftGenderAndDepartmentWiseDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SemesterShiftGenderAndDepartmentWiseDetailForm.Designer.cs">
+      <DependentUpon>SemesterShiftGenderAndDepartmentWiseDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SemesterWiseDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SemesterWiseDetailForm.Designer.cs">
+      <DependentUpon>SemesterWiseDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShiftAndDepartmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShiftAndDepartmentForm.Designer.cs">
+      <DependentUpon>ShiftAndDepartmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShiftWiseDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShiftWiseDetailForm.Designer.cs">
+      <DependentUpon>ShiftWiseDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TotalAmountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TotalAmountForm.Designer.cs">
+      <DependentUpon>TotalAmountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TotalAmountLastForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TotalAmountLastForm.Designer.cs">
+      <DependentUpon>TotalAmountLastForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddDepartmentForm.resx">
+      <DependentUpon>AddDepartmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStudentInformatio.resx">
+      <DependentUpon>AddStudentInformatio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CountMilForm.resx">
+      <DependentUpon>CountMilForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DayAndGiverWiseSummary.resx">
+      <DependentUpon>DayAndGiverWiseSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DayAndNameWiseExpansesForm.resx">
+      <DependentUpon>DayAndNameWiseExpansesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DayAndRiceverWiseSummary.resx">
+      <DependentUpon>DayAndRiceverWiseSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DayByDayTotalAmountcs.resx">
+      <DependentUpon>DayByDayTotalAmountcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DayWiseExpansesForm.resx">
+      <DependentUpon>DayWiseExpansesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DayWiseMilSummary.resx">
+      <DependentUpon>DayWiseMilSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepartmentAndGenderWiseDetailForm.resx">
+      <DependentUpon>DepartmentAndGenderWiseDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepartmentWiseDetailForm.resx">
+      <DependentUpon>DepartmentWiseDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DipositFormcs.resx">
+      <DependentUpon>DipositFormcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpansesPaidForm.resx">
+      <DependentUpon>ExpansesPaidForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenderAndShiftForm.resx">
+      <DependentUpon>GenderAndShiftForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenderWiseDetailForm.resx">
+      <DependentUpon>GenderWiseDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiveAndRicevedForm.resx">
+      <DependentUpon>GiveAndRicevedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MilRateForm.resx">
+      <DependentUpon>MilRateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoneyWithdrawForm.resx">
+      <DependentUpon>MoneyWithdrawForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MotherForm.resx">
+      <DependentUpon>MotherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NameAndDayWiseMilSummaryForm.resx">
+      <DependentUpon>NameAndDayWiseMilSummaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_DayWiseExpensesDetail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_DayWiseExpensesDetail.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT_DayWiseExpensesReportForm.resx">
+      <DependentUpon>RPT_DayWiseExpensesReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_DayWiseMilReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_DayWiseMilReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT_DayWiseMilReportForm.resx">
+      <DependentUpon>RPT_DayWiseMilReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT_NameAndDayWisMilDetailReportViewerForm.resx">
+      <DependentUpon>RPT_NameAndDayWisMilDetailReportViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_NameAndDayWiseSummaryReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_NameAndDayWiseSummaryReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NameWiseMilSummaryForm.resx">
+      <DependentUpon>NameWiseMilSummaryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PurposeForm.resx">
+      <DependentUpon>PurposeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurposeWiseForm.resx">
+      <DependentUpon>PurposeWiseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT_ReportForm.resx">
+      <DependentUpon>RPT_ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_StudentInforReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_StudentInforReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SemesterAndDepartmentForm.resx">
+      <DependentUpon>SemesterAndDepartmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SemesterAndGenderform.resx">
+      <DependentUpon>SemesterAndGenderform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SemesterAndShiftForm.resx">
+      <DependentUpon>SemesterAndShiftForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SemesterShiftGenderAndDepartmentWiseDetailForm.resx">
+      <DependentUpon>SemesterShiftGenderAndDepartmentWiseDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SemesterWiseDetailForm.resx">
+      <DependentUpon>SemesterWiseDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShiftAndDepartmentForm.resx">
+      <DependentUpon>ShiftAndDepartmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShiftWiseDetailForm.resx">
+      <DependentUpon>ShiftWiseDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TotalAmountForm.resx">
+      <DependentUpon>TotalAmountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TotalAmountLastForm.resx">
+      <DependentUpon>TotalAmountLastForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="DORMITORY.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DORMITORY.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="App.Config" />
+    <None Include="DORMITORYDataSet1.xsc">
+      <DependentUpon>DORMITORYDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DORMITORYDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DORMITORYDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DORMITORYDataSet1.xss">
+      <DependentUpon>DORMITORYDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DORMITORYDataSet11.xsc">
+      <DependentUpon>DORMITORYDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="DORMITORYDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DORMITORYDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DORMITORYDataSet11.xss">
+      <DependentUpon>DORMITORYDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="DORMITORYDataSet2.xsc">
+      <DependentUpon>DORMITORYDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DORMITORYDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DORMITORYDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DORMITORYDataSet2.xss">
+      <DependentUpon>DORMITORYDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="MasManagementSoftware_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_9539.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_9719.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Books-sitting-on-a-laptop-8.19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stuydtips_20191219162831.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\high-school-students-440x220.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\36025017-natural-picture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bigstock-Closed-Padlock-On-Digital-Back-383628656.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0_0_480_1_70__News_lock_security_encryption_decryption.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\will-h-mcmahan-S3JdHNXSfnA-unsplash.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online-education-learning-work-home-man-hand-writing-notebook-using-laptop-computer-adult-male-student-study-course-177445400.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-isaac-taylor-1557251.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

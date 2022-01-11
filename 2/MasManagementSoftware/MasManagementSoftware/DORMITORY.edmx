@@ -1,0 +1,1627 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DORMITORYModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="DORMITORYModelStoreContainer">
+          <EntitySet Name="DepartmentInfo" EntityType="DORMITORYModel.Store.DepartmentInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DipositMoneyDetail" EntityType="DORMITORYModel.Store.DipositMoneyDetail" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ExpenditureDetail" EntityType="DORMITORYModel.Store.ExpenditureDetail" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GenderInfo" EntityType="DORMITORYModel.Store.GenderInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MilInfoDetail" EntityType="DORMITORYModel.Store.MilInfoDetail" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PurposeInfo" EntityType="DORMITORYModel.Store.PurposeInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SemisterInfo" EntityType="DORMITORYModel.Store.SemisterInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ShiftInfo" EntityType="DORMITORYModel.Store.ShiftInfo" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="StudentInformation" EntityType="DORMITORYModel.Store.StudentInformation" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="DORMITORYModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_DipositMoneyDetail_PurposeInfo" Association="DORMITORYModel.Store.FK_DipositMoneyDetail_PurposeInfo">
+            <End Role="PurposeInfo" EntitySet="PurposeInfo" />
+            <End Role="DipositMoneyDetail" EntitySet="DipositMoneyDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DipositMoneyDetail_StudentInformation" Association="DORMITORYModel.Store.FK_DipositMoneyDetail_StudentInformation">
+            <End Role="StudentInformation" EntitySet="StudentInformation" />
+            <End Role="DipositMoneyDetail" EntitySet="DipositMoneyDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DipositMoneyDetail_StudentInformation1" Association="DORMITORYModel.Store.FK_DipositMoneyDetail_StudentInformation1">
+            <End Role="StudentInformation" EntitySet="StudentInformation" />
+            <End Role="DipositMoneyDetail" EntitySet="DipositMoneyDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ExpenditurePaid_StudentInformation" Association="DORMITORYModel.Store.FK_ExpenditurePaid_StudentInformation">
+            <End Role="StudentInformation" EntitySet="StudentInformation" />
+            <End Role="ExpenditureDetail" EntitySet="ExpenditureDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MilInfoDetail_StudentInformation" Association="DORMITORYModel.Store.FK_MilInfoDetail_StudentInformation">
+            <End Role="StudentInformation" EntitySet="StudentInformation" />
+            <End Role="MilInfoDetail" EntitySet="MilInfoDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentInformation_DepartmentInfo" Association="DORMITORYModel.Store.FK_StudentInformation_DepartmentInfo">
+            <End Role="DepartmentInfo" EntitySet="DepartmentInfo" />
+            <End Role="StudentInformation" EntitySet="StudentInformation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentInformation_GenderInfo" Association="DORMITORYModel.Store.FK_StudentInformation_GenderInfo">
+            <End Role="GenderInfo" EntitySet="GenderInfo" />
+            <End Role="StudentInformation" EntitySet="StudentInformation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentInformation_SemisterInfo" Association="DORMITORYModel.Store.FK_StudentInformation_SemisterInfo">
+            <End Role="SemisterInfo" EntitySet="SemisterInfo" />
+            <End Role="StudentInformation" EntitySet="StudentInformation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentInformation_ShiftInfo" Association="DORMITORYModel.Store.FK_StudentInformation_ShiftInfo">
+            <End Role="ShiftInfo" EntitySet="ShiftInfo" />
+            <End Role="StudentInformation" EntitySet="StudentInformation" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="DepartmentInfo">
+          <Key>
+            <PropertyRef Name="DepartmentId" />
+          </Key>
+          <Property Name="DepartmentId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DepartmentName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="DipositMoneyDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="date" />
+          <Property Name="GiverId" Type="int" />
+          <Property Name="ReciverId" Type="int" />
+          <Property Name="PurposeId" Type="int" />
+          <Property Name="Money" Type="money" />
+          <Property Name="Credit_Money" Type="money" />
+        </EntityType>
+        <EntityType Name="ExpenditureDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="date" />
+          <Property Name="StudentId" Type="int" />
+          <Property Name="WhichOneName" Type="varchar" MaxLength="250" />
+          <Property Name="ExpansesName" Type="varchar" MaxLength="50" />
+          <Property Name="GivenMoney" Type="money" />
+          <Property Name="ExpansesMoney" Type="money" />
+          <Property Name="ReturnMoney" Type="money" />
+        </EntityType>
+        <EntityType Name="GenderInfo">
+          <Key>
+            <PropertyRef Name="GenderId" />
+          </Key>
+          <Property Name="GenderId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GenderName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MilInfoDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="date" />
+          <Property Name="StudentId" Type="int" />
+          <Property Name="Mil" Type="int" />
+        </EntityType>
+        <EntityType Name="PurposeInfo">
+          <Key>
+            <PropertyRef Name="PurposeId" />
+          </Key>
+          <Property Name="PurposeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PurposeName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SemisterInfo">
+          <Key>
+            <PropertyRef Name="SemisterId" />
+          </Key>
+          <Property Name="SemisterId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SemisterName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ShiftInfo">
+          <Key>
+            <PropertyRef Name="ShiftId" />
+          </Key>
+          <Property Name="ShiftId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ShiftName" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="StudentInformation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" MaxLength="32" />
+          <Property Name="Roll" Type="int" />
+          <Property Name="Registration" Type="int" />
+          <Property Name="SemisterId" Type="int" />
+          <Property Name="ShiftId" Type="int" />
+          <Property Name="DepartmentId" Type="int" />
+          <Property Name="GenderId" Type="int" />
+          <Property Name="Address" Type="varchar" MaxLength="50" />
+          <Property Name="Phone" Type="int" />
+          <Property Name="DateOfBirth" Type="date" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK_DipositMoneyDetail_PurposeInfo">
+          <End Role="PurposeInfo" Type="DORMITORYModel.Store.PurposeInfo" Multiplicity="0..1" />
+          <End Role="DipositMoneyDetail" Type="DORMITORYModel.Store.DipositMoneyDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PurposeInfo">
+              <PropertyRef Name="PurposeId" />
+            </Principal>
+            <Dependent Role="DipositMoneyDetail">
+              <PropertyRef Name="PurposeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DipositMoneyDetail_StudentInformation">
+          <End Role="StudentInformation" Type="DORMITORYModel.Store.StudentInformation" Multiplicity="0..1" />
+          <End Role="DipositMoneyDetail" Type="DORMITORYModel.Store.DipositMoneyDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StudentInformation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DipositMoneyDetail">
+              <PropertyRef Name="GiverId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DipositMoneyDetail_StudentInformation1">
+          <End Role="StudentInformation" Type="DORMITORYModel.Store.StudentInformation" Multiplicity="0..1" />
+          <End Role="DipositMoneyDetail" Type="DORMITORYModel.Store.DipositMoneyDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StudentInformation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DipositMoneyDetail">
+              <PropertyRef Name="ReciverId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ExpenditurePaid_StudentInformation">
+          <End Role="StudentInformation" Type="DORMITORYModel.Store.StudentInformation" Multiplicity="0..1" />
+          <End Role="ExpenditureDetail" Type="DORMITORYModel.Store.ExpenditureDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StudentInformation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ExpenditureDetail">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MilInfoDetail_StudentInformation">
+          <End Role="StudentInformation" Type="DORMITORYModel.Store.StudentInformation" Multiplicity="0..1" />
+          <End Role="MilInfoDetail" Type="DORMITORYModel.Store.MilInfoDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StudentInformation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MilInfoDetail">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentInformation_DepartmentInfo">
+          <End Role="DepartmentInfo" Type="DORMITORYModel.Store.DepartmentInfo" Multiplicity="0..1" />
+          <End Role="StudentInformation" Type="DORMITORYModel.Store.StudentInformation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DepartmentInfo">
+              <PropertyRef Name="DepartmentId" />
+            </Principal>
+            <Dependent Role="StudentInformation">
+              <PropertyRef Name="DepartmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentInformation_GenderInfo">
+          <End Role="GenderInfo" Type="DORMITORYModel.Store.GenderInfo" Multiplicity="0..1" />
+          <End Role="StudentInformation" Type="DORMITORYModel.Store.StudentInformation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GenderInfo">
+              <PropertyRef Name="GenderId" />
+            </Principal>
+            <Dependent Role="StudentInformation">
+              <PropertyRef Name="GenderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentInformation_SemisterInfo">
+          <End Role="SemisterInfo" Type="DORMITORYModel.Store.SemisterInfo" Multiplicity="0..1" />
+          <End Role="StudentInformation" Type="DORMITORYModel.Store.StudentInformation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SemisterInfo">
+              <PropertyRef Name="SemisterId" />
+            </Principal>
+            <Dependent Role="StudentInformation">
+              <PropertyRef Name="SemisterId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentInformation_ShiftInfo">
+          <End Role="ShiftInfo" Type="DORMITORYModel.Store.ShiftInfo" Multiplicity="0..1" />
+          <End Role="StudentInformation" Type="DORMITORYModel.Store.StudentInformation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ShiftInfo">
+              <PropertyRef Name="ShiftId" />
+            </Principal>
+            <Dependent Role="StudentInformation">
+              <PropertyRef Name="ShiftId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SEMESTER" Type="int" Mode="In" />
+          <Parameter Name="SHIFT" Type="int" Mode="In" />
+          <Parameter Name="DEPARTMENT" Type="int" Mode="In" />
+          <Parameter Name="GENDER" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SDATE" Type="date" Mode="In" />
+          <Parameter Name="EDATE" Type="date" Mode="In" />
+          <Parameter Name="NAME" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_DAYANDRICEVERWISESUMMARY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="STARTDATE" Type="date" Mode="In" />
+          <Parameter Name="ENDDATE" Type="date" Mode="In" />
+          <Parameter Name="RICEVERNAME" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_DAYBYDAYTOTALAMOUNT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="STARTDATE" Type="date" Mode="In" />
+          <Parameter Name="ENDDATE" Type="date" Mode="In" />
+        </Function>
+        <Function Name="SP_DAYWISEMILSUMMARY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TODAY" Type="date" Mode="In" />
+          <Parameter Name="TOMORROW" Type="date" Mode="In" />
+        </Function>
+        <Function Name="SP_DEPARTMENT_WISE_SUMMARY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="DEPARTMENT" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_EXPANSESDAYANDNAMEWISE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SDATE" Type="date" Mode="In" />
+          <Parameter Name="EDATE" Type="date" Mode="In" />
+          <Parameter Name="NAME" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_EXPANSESDAYWISEDISPLAY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SDATE" Type="date" Mode="In" />
+          <Parameter Name="EDATE" Type="date" Mode="In" />
+        </Function>
+        <Function Name="SP_EXPANSESDISPLAY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_GENDER_DEPARTMENT_WISE_SUMMARY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="GENDER" Type="int" Mode="In" />
+          <Parameter Name="DEPARTMENT" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_GENDER_WISE_SUMAMRY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="GENDER" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_GIVERANDDAYWISESUMMYDISPLAY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="STARTDATE" Type="date" Mode="In" />
+          <Parameter Name="ENDDATE" Type="date" Mode="In" />
+          <Parameter Name="GIVERNAME" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_GRIDVIEWDIPOSIT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_GRIDVIEWDISPLAY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_LAST_TOTAL_AMOUNT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SDATE" Type="date" Mode="In" />
+          <Parameter Name="EDATE" Type="date" Mode="In" />
+        </Function>
+        <Function Name="SP_LAST_TOTAL_AMOUNT_DAY_WISE_SYMMARY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SDATE" Type="date" Mode="In" />
+          <Parameter Name="EDATE" Type="date" Mode="In" />
+        </Function>
+        <Function Name="SP_MILDISPLAY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_NAMEANDDATEWISEMILSUMMARY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TODAY" Type="date" Mode="In" />
+          <Parameter Name="TOMORROW" Type="date" Mode="In" />
+          <Parameter Name="STUDENTNAME" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_NAMEANDDAYWISEDIPOSITDETAIL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SDATE" Type="date" Mode="In" />
+          <Parameter Name="EDATE" Type="date" Mode="In" />
+          <Parameter Name="NAME" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_NAMEANDDAYWISEMILDETAIL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SDATE" Type="date" Mode="In" />
+          <Parameter Name="EDATE" Type="date" Mode="In" />
+          <Parameter Name="NAME" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_NAMEWISEMILSUMMAY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="STUDENTNAME" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_PURPOSEANDDAYWISEDETAIL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SDATE" Type="date" Mode="In" />
+          <Parameter Name="EDATE" Type="date" Mode="In" />
+          <Parameter Name="PURPOSE" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="SP_REPORTGIVERANDRICEVERWISE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="GIVERID" Type="int" Mode="In" />
+          <Parameter Name="RICEVERID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_SEMESTER_DEPARTMENT_WISE_SUMMAY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SEMESTER" Type="int" Mode="In" />
+          <Parameter Name="DEPARTMENT" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_SEMESTER_GENDER_WISE_SUMMARY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="GENDER" Type="int" Mode="In" />
+          <Parameter Name="SEMESTER" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_SEMESTER_WISE_SUMMARY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SEMSETER" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_SHIFT_DEPARTMENT_WISE_SUMMAY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SHIFT" Type="int" Mode="In" />
+          <Parameter Name="DEPARTMENT" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_SHIFT_GENDER_WISE_SUMMARY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="GENDER" Type="int" Mode="In" />
+          <Parameter Name="SHIFT" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_SHIFT_SEMESTER_WISE_DETAIL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SEMSETER" Type="int" Mode="In" />
+          <Parameter Name="SHIFT" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_SHIFT_WISE_SUMMAY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SHIFT" Type="int" Mode="In" />
+        </Function>
+        <Function Name="SP_SHOWMILDAYWISE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SDATE" Type="date" Mode="In" />
+          <Parameter Name="EDATE" Type="date" Mode="In" />
+        </Function>
+        <Function Name="SP_TOTALAMOUNTGRIDVIEW" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_TOTALEXPANSESDAYWISE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SDATE" Type="date" Mode="In" />
+          <Parameter Name="EDATE" Type="date" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_WITHDRAWGRIDVIEW" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="SP_XXXXXXXXXXXXXXXXXXX" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DORMITORYModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="DORMITORYEntities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="SP_GRIDVIEWDISPLAY" ReturnType="Collection(DORMITORYModel.SP_GRIDVIEWDISPLAY_Result)" />
+          <FunctionImport Name="SP_GRIDVIEWDIPOSIT" ReturnType="Collection(DORMITORYModel.SP_GRIDVIEWDIPOSIT_Result)" />
+          <FunctionImport Name="SP_WITHDRAWGRIDVIEW" ReturnType="Collection(DORMITORYModel.SP_WITHDRAWGRIDVIEW_Result)" />
+          <FunctionImport Name="SP_TOTALAMOUNTGRIDVIEW" ReturnType="Collection(DORMITORYModel.SP_TOTALAMOUNTGRIDVIEW_Result)" />
+          <FunctionImport Name="SP_REPORTGIVERANDRICEVERWISE" ReturnType="Collection(DORMITORYModel.SP_REPORTGIVERANDRICEVERWISE_Result)">
+            <Parameter Name="GIVERID" Mode="In" Type="Int32" />
+            <Parameter Name="RICEVERID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_DAYBYDAYTOTALAMOUNT" ReturnType="Collection(DORMITORYModel.SP_DAYBYDAYTOTALAMOUNT_Result)">
+            <Parameter Name="STARTDATE" Mode="In" Type="DateTime" />
+            <Parameter Name="ENDDATE" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="SP_GIVERANDDAYWISESUMMYDISPLAY" ReturnType="Collection(DORMITORYModel.SP_GIVERANDDAYWISESUMMYDISPLAY_Result1)">
+            <Parameter Name="STARTDATE" Mode="In" Type="DateTime" />
+            <Parameter Name="ENDDATE" Mode="In" Type="DateTime" />
+            <Parameter Name="GIVERNAME" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_DAYANDRICEVERWISESUMMARY" ReturnType="Collection(DORMITORYModel.SP_DAYANDRICEVERWISESUMMARY_Result)">
+            <Parameter Name="STARTDATE" Mode="In" Type="DateTime" />
+            <Parameter Name="ENDDATE" Mode="In" Type="DateTime" />
+            <Parameter Name="RICEVERNAME" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_MILDISPLAY" ReturnType="Collection(DORMITORYModel.SP_MILDISPLAY_Result)" />
+          <FunctionImport Name="SP_NAMEWISEMILSUMMAY" ReturnType="Collection(DORMITORYModel.SP_NAMEWISEMILSUMMAY_Result)">
+          <Parameter Name="STUDENTNAME" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_DAYWISEMILSUMMARY" ReturnType="Collection(DORMITORYModel.SP_DAYWISEMILSUMMARY_Result)">
+            <Parameter Name="TODAY" Mode="In" Type="DateTime" />
+            <Parameter Name="TOMORROW" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="SP_NAMEANDDATEWISEMILSUMMARY" ReturnType="Collection(DORMITORYModel.SP_NAMEANDDATEWISEMILSUMMARY_Result)">
+            <Parameter Name="TODAY" Mode="In" Type="DateTime" />
+            <Parameter Name="TOMORROW" Mode="In" Type="DateTime" />
+            <Parameter Name="STUDENTNAME" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_EXPANSESDISPLAY" ReturnType="Collection(DORMITORYModel.SP_EXPANSESDISPLAY_Result)" />
+          <FunctionImport Name="SP_EXPANSESDAYWISEDISPLAY" ReturnType="Collection(DORMITORYModel.SP_EXPANSESDAYWISEDISPLAY_Result1)">
+            <Parameter Name="SDATE" Mode="In" Type="DateTime" />
+            <Parameter Name="EDATE" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="SP_EXPANSESDAYANDNAMEWISE" ReturnType="Collection(DORMITORYModel.SP_EXPANSESDAYANDNAMEWISE_Result)">
+            <Parameter Name="SDATE" Mode="In" Type="DateTime" />
+            <Parameter Name="EDATE" Mode="In" Type="DateTime" />
+            <Parameter Name="NAME" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_PURPOSEANDDAYWISEDETAIL" ReturnType="Collection(DORMITORYModel.SP_PURPOSEANDDAYWISEDETAIL_Result)">
+            <Parameter Name="SDATE" Mode="In" Type="DateTime" />
+            <Parameter Name="EDATE" Mode="In" Type="DateTime" />
+            <Parameter Name="PURPOSE" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_SHOWMILDAYWISE" ReturnType="Collection(DORMITORYModel.SP_SHOWMILDAYWISE_Result)">
+            <Parameter Name="SDATE" Mode="In" Type="DateTime" />
+            <Parameter Name="EDATE" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="SP_TOTALEXPANSESDAYWISE" ReturnType="Collection(DORMITORYModel.SP_TOTALEXPANSESDAYWISE_Result)">
+            <Parameter Name="SDATE" Mode="In" Type="DateTime" />
+            <Parameter Name="EDATE" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="SP_NAMEANDDAYWISEDIPOSITDETAIL" ReturnType="Collection(DORMITORYModel.SP_NAMEANDDAYWISEDIPOSITDETAIL_Result1)">
+            <Parameter Name="SDATE" Mode="In" Type="DateTime" />
+            <Parameter Name="EDATE" Mode="In" Type="DateTime" />
+            <Parameter Name="NAME" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_NAMEANDDAYWISEMILDETAIL" ReturnType="Collection(DORMITORYModel.SP_NAMEANDDAYWISEMILDETAIL_Result1)">
+            <Parameter Name="SDATE" Mode="In" Type="DateTime" />
+            <Parameter Name="EDATE" Mode="In" Type="DateTime" />
+            <Parameter Name="NAME" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_SEMESTER_SHIFT_GENDER_and_DEPARTMENTWISESUMMARY">
+            <Parameter Name="SEMESTER" Mode="In" Type="Int32" />
+            <Parameter Name="SHIFT" Mode="In" Type="Int32" />
+            <Parameter Name="DEPARTMENT" Mode="In" Type="Int32" />
+            <Parameter Name="GENDER" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_DEPARTMENT_WISE_SUMMARY" ReturnType="Collection(DORMITORYModel.SP_DEPARTMENT_WISE_SUMMARY_Result)">
+          <Parameter Name="DEPARTMENT" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_GENDER_DEPARTMENT_WISE_SUMMARY" ReturnType="Collection(DORMITORYModel.SP_GENDER_DEPARTMENT_WISE_SUMMARY_Result)">
+            <Parameter Name="GENDER" Mode="In" Type="Int32" />
+            <Parameter Name="DEPARTMENT" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_GENDER_WISE_SUMAMRY" ReturnType="Collection(DORMITORYModel.SP_GENDER_WISE_SUMAMRY_Result)">
+          <Parameter Name="GENDER" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_SEMESTER_DEPARTMENT_WISE_SUMMAY" ReturnType="Collection(DORMITORYModel.SP_SEMESTER_DEPARTMENT_WISE_SUMMAY_Result)">
+            <Parameter Name="SEMESTER" Mode="In" Type="Int32" />
+            <Parameter Name="DEPARTMENT" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_SEMESTER_GENDER_WISE_SUMMARY" ReturnType="Collection(DORMITORYModel.SP_SEMESTER_GENDER_WISE_SUMMARY_Result)">
+            <Parameter Name="GENDER" Mode="In" Type="Int32" />
+            <Parameter Name="SEMESTER" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_SEMESTER_WISE_SUMMARY" ReturnType="Collection(DORMITORYModel.SP_SEMESTER_WISE_SUMMARY_Result)">
+          <Parameter Name="SEMSETER" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_SHIFT_DEPARTMENT_WISE_SUMMAY" ReturnType="Collection(DORMITORYModel.SP_SHIFT_DEPARTMENT_WISE_SUMMAY_Result)">
+            <Parameter Name="SHIFT" Mode="In" Type="Int32" />
+            <Parameter Name="DEPARTMENT" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_SHIFT_GENDER_WISE_SUMMARY" ReturnType="Collection(DORMITORYModel.SP_SHIFT_GENDER_WISE_SUMMARY_Result)">
+            <Parameter Name="GENDER" Mode="In" Type="Int32" />
+            <Parameter Name="SHIFT" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_SHIFT_SEMESTER_WISE_DETAIL" ReturnType="Collection(DORMITORYModel.SP_SHIFT_SEMESTER_WISE_DETAIL_Result)">
+            <Parameter Name="SEMSETER" Mode="In" Type="Int32" />
+            <Parameter Name="SHIFT" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_SHIFT_WISE_SUMMAY" ReturnType="Collection(DORMITORYModel.SP_SHIFT_WISE_SUMMAY_Result)">
+          <Parameter Name="SHIFT" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SP_LAST_TOTAL_AMOUNT_DAY_WISE_SYMMARY" ReturnType="Collection(DORMITORYModel.SP_LAST_TOTAL_AMOUNT_DAY_WISE_SYMMARY_Result)">
+            <Parameter Name="SDATE" Mode="In" Type="DateTime" />
+            <Parameter Name="EDATE" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="SP_LAST_TOTAL_AMOUNT" ReturnType="Collection(DORMITORYModel.SP_LAST_TOTAL_AMOUNT_Result)">
+            <Parameter Name="SDATE" Mode="In" Type="DateTime" />
+            <Parameter Name="EDATE" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="SP_XXXXXXXXXXXXXXXXXXX" ReturnType="Collection(DORMITORYModel.SP_XXXXXXXXXXXXXXXXXXX_Result)" />
+          <FunctionImport Name="SP_ALL" ReturnType="Collection(DORMITORYModel.SP_ALL_Result)">
+            <Parameter Name="SEMESTER" Mode="In" Type="Int32" />
+            <Parameter Name="SHIFT" Mode="In" Type="Int32" />
+            <Parameter Name="DEPARTMENT" Mode="In" Type="Int32" />
+            <Parameter Name="GENDER" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="DepartmentInfoes" EntityType="DORMITORYModel.DepartmentInfo" />
+          <EntitySet Name="DipositMoneyDetails" EntityType="DORMITORYModel.DipositMoneyDetail" />
+          <EntitySet Name="ExpenditureDetails" EntityType="DORMITORYModel.ExpenditureDetail" />
+          <EntitySet Name="GenderInfoes" EntityType="DORMITORYModel.GenderInfo" />
+          <EntitySet Name="MilInfoDetails" EntityType="DORMITORYModel.MilInfoDetail" />
+          <EntitySet Name="PurposeInfoes" EntityType="DORMITORYModel.PurposeInfo" />
+          <EntitySet Name="SemisterInfoes" EntityType="DORMITORYModel.SemisterInfo" />
+          <EntitySet Name="ShiftInfoes" EntityType="DORMITORYModel.ShiftInfo" />
+          <EntitySet Name="StudentInformations" EntityType="DORMITORYModel.StudentInformation" />
+          <EntitySet Name="sysdiagrams" EntityType="DORMITORYModel.sysdiagram" />
+          <AssociationSet Name="FK_StudentInformation_DepartmentInfo" Association="DORMITORYModel.FK_StudentInformation_DepartmentInfo">
+            <End Role="DepartmentInfo" EntitySet="DepartmentInfoes" />
+            <End Role="StudentInformation" EntitySet="StudentInformations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DipositMoneyDetail_PurposeInfo" Association="DORMITORYModel.FK_DipositMoneyDetail_PurposeInfo">
+            <End Role="PurposeInfo" EntitySet="PurposeInfoes" />
+            <End Role="DipositMoneyDetail" EntitySet="DipositMoneyDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DipositMoneyDetail_StudentInformation" Association="DORMITORYModel.FK_DipositMoneyDetail_StudentInformation">
+            <End Role="StudentInformation" EntitySet="StudentInformations" />
+            <End Role="DipositMoneyDetail" EntitySet="DipositMoneyDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DipositMoneyDetail_StudentInformation1" Association="DORMITORYModel.FK_DipositMoneyDetail_StudentInformation1">
+            <End Role="StudentInformation" EntitySet="StudentInformations" />
+            <End Role="DipositMoneyDetail" EntitySet="DipositMoneyDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ExpenditurePaid_StudentInformation" Association="DORMITORYModel.FK_ExpenditurePaid_StudentInformation">
+            <End Role="StudentInformation" EntitySet="StudentInformations" />
+            <End Role="ExpenditureDetail" EntitySet="ExpenditureDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentInformation_GenderInfo" Association="DORMITORYModel.FK_StudentInformation_GenderInfo">
+            <End Role="GenderInfo" EntitySet="GenderInfoes" />
+            <End Role="StudentInformation" EntitySet="StudentInformations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MilInfoDetail_StudentInformation" Association="DORMITORYModel.FK_MilInfoDetail_StudentInformation">
+            <End Role="StudentInformation" EntitySet="StudentInformations" />
+            <End Role="MilInfoDetail" EntitySet="MilInfoDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentInformation_SemisterInfo" Association="DORMITORYModel.FK_StudentInformation_SemisterInfo">
+            <End Role="SemisterInfo" EntitySet="SemisterInfoes" />
+            <End Role="StudentInformation" EntitySet="StudentInformations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_StudentInformation_ShiftInfo" Association="DORMITORYModel.FK_StudentInformation_ShiftInfo">
+            <End Role="ShiftInfo" EntitySet="ShiftInfoes" />
+            <End Role="StudentInformation" EntitySet="StudentInformations" />
+          </AssociationSet>
+          <FunctionImport Name="SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL" ReturnType="Collection(DORMITORYModel.SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL_Result)">
+            <Parameter Name="SDATE" Mode="In" Type="DateTime" />
+            <Parameter Name="EDATE" Mode="In" Type="DateTime" />
+            <Parameter Name="NAME" Mode="In" Type="Int32" />
+          </FunctionImport>
+          </EntityContainer>
+        <ComplexType Name="SP_GRIDVIEWDISPLAY_Result">
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="32" />
+          <Property Type="Int32" Name="Roll" Nullable="true" />
+          <Property Type="Int32" Name="Registration" Nullable="true" />
+          <Property Type="String" Name="SemisterName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="DepartmentName" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="DateOfBirth" Nullable="true" />
+          <Property Type="Int32" Name="Phone" Nullable="true" />
+          <Property Type="String" Name="ShiftName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Address" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="SP_GRIDVIEWDIPOSIT_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="32" />
+          <Property Type="Int32" Name="ReciverId" Nullable="true" />
+          <Property Type="DateTime" Name="Date" Nullable="true" />
+          <Property Type="Decimal" Name="Money" Nullable="true" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="SP_WITHDRAWGRIDVIEW_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="32" />
+          <Property Type="DateTime" Name="Date" Nullable="true" />
+          <Property Type="String" Name="PurposeName" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="Credit_Money" Nullable="true" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="SP_TOTALAMOUNTGRIDVIEW_Result">
+          <Property Type="DateTime" Name="Date" Nullable="true" />
+          <Property Type="Decimal" Name="Money" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="Credit_Money" Nullable="true" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="SP_REPORTGIVERANDRICEVERWISE_Result">
+          <Property Type="DateTime" Name="Date" Nullable="true" />
+          <Property Type="Decimal" Name="Money" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="Credit_Money" Nullable="true" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="SP_DAYBYDAYTOTALAMOUNT_Result">
+          <Property Type="DateTime" Name="Date" Nullable="true" />
+          <Property Type="Decimal" Name="Money" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="Credit_Money" Nullable="true" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="SP_GIVERANDDAYWISESUMMYDISPLAY_Result">
+          <Property Type="Int32" Name="GiverId" Nullable="true" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="32" />
+          <Property Type="Decimal" Name="Money" Nullable="true" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="SP_GIVERANDDAYWISESUMMYDISPLAY_Result1">
+          <Property Type="DateTime" Name="Date" Nullable="true" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="32" />
+          <Property Type="Decimal" Name="Money" Nullable="true" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="SP_DAYANDRICEVERWISESUMMARY_Result">
+          <Property Type="DateTime" Name="Date" Nullable="true" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="32" />
+          <Property Type="String" Name="PurposeName" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="Money" Nullable="true" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="SP_MILDISPLAY_Result">
+          <Property Type="DateTime" Name="Date" Nullable="true" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="32" />
+          <Property Type="Int32" Name="Mil" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_NAMEWISEMILSUMMAY_Result">
+          <Property Type="DateTime" Name="Date" Nullable="true" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="32" />
+          <Property Type="Int32" Name="Mil" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_DAYWISEMILSUMMARY_Result">
+          <Property Type="DateTime" Name="Date" Nullable="true" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="32" />
+          <Property Type="Int32" Name="Mil" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_NAMEANDDATEWISEMILSUMMARY_Result">
+          <Property Type="DateTime" Name="Date" Nullable="true" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="32" />
+          <Property Type="Int32" Name="Mil" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_EXPANSESDISPLAY_Result">
+          <Property Type="DateTime" Name="Date" Nullable="true" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="32" />
+          <Property Type="String" Name="WhichOneName" Nullable="true" MaxLength="250" />
+          <Property Type="String" Name="ExpansesName" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="GivenMoney" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="ExpansesMoney" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="ReturnMoney" Nullable="true" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="SP_EXPANSESDAYWISEDISPLAY_Result">
+          <Property Type="DateTime" Name="Date" Nullable="true" />
+          <Property Type="String" Name="ExpansesName" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="GivenMoney" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="ExpansesMoney" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="ReturnMoney" Nullable="true" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="SP_EXPANSESDAYANDNAMEWISE_Result">
+          <Property Type="DateTime" Name="Date" Nullable="true" />
+          <Property Type="String" Name="ExpansesName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="WhichOneName" Nullable="true" MaxLength="250" />
+          <Property Type="Decimal" Name="GivenMoney" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="ExpansesMoney" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="ReturnMoney" Nullable="true" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="SP_PURPOSEANDDAYWISEDETAIL_Result">
+          <Property Type="DateTime" Name="Date" Nullable="true" />
+          <Property Type="Decimal" Name="Money" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="Credit_Money" Nullable="true" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="SP_SHOWMILDAYWISE_Result">
+          <Property Type="Int32" Name="Mil" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_TOTALEXPANSESDAYWISE_Result">
+          <Property Type="Decimal" Name="ExpansesMoney" Nullable="true" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="SP_NAMEANDDAYWISEDIPOSITDETAIL_Result">
+          <Property Type="Decimal" Name="Money" Nullable="true" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="SP_NAMEANDDAYWISEMILDETAIL_Result">
+          <Property Type="Int32" Name="Mil" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_NAMEANDDAYWISEDIPOSITDETAIL_Result1">
+          <Property Type="Decimal" Name="Money" Nullable="true" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="SP_NAMEANDDAYWISEMILDETAIL_Result1">
+          <Property Type="Int32" Name="Mil" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="SP_DEPARTMENT_WISE_SUMMARY_Result">
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="32" />
+          <Property Type="Int32" Name="Roll" Nullable="true" />
+          <Property Type="Int32" Name="Registration" Nullable="true" />
+          <Property Type="String" Name="GenderName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="DepartmentName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ShiftName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="SemisterName" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="SP_GENDER_DEPARTMENT_WISE_SUMMARY_Result">
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="32" />
+          <Property Type="Int32" Name="Roll" Nullable="true" />
+          <Property Type="Int32" Name="Registration" Nullable="true" />
+          <Property Type="String" Name="GenderName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="DepartmentName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ShiftName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="SemisterName" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="SP_GENDER_WISE_SUMAMRY_Result">
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="32" />
+          <Property Type="Int32" Name="Roll" Nullable="true" />
+          <Property Type="Int32" Name="Registration" Nullable="true" />
+          <Property Type="String" Name="GenderName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="DepartmentName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ShiftName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="SemisterName" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="SP_SEMESTER_DEPARTMENT_WISE_SUMMAY_Result">
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="32" />
+          <Property Type="Int32" Name="Roll" Nullable="true" />
+          <Property Type="Int32" Name="Registration" Nullable="true" />
+          <Property Type="String" Name="GenderName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="DepartmentName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ShiftName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="SemisterName" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="SP_SEMESTER_GENDER_WISE_SUMMARY_Result">
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="32" />
+          <Property Type="Int32" Name="Roll" Nullable="true" />
+          <Property Type="Int32" Name="Registration" Nullable="true" />
+          <Property Type="String" Name="GenderName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="DepartmentName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ShiftName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="SemisterName" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="SP_SEMESTER_WISE_SUMMARY_Result">
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="32" />
+          <Property Type="Int32" Name="Roll" Nullable="true" />
+          <Property Type="Int32" Name="Registration" Nullable="true" />
+          <Property Type="String" Name="GenderName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="DepartmentName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ShiftName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="SemisterName" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="SP_SHIFT_DEPARTMENT_WISE_SUMMAY_Result">
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="32" />
+          <Property Type="Int32" Name="Roll" Nullable="true" />
+          <Property Type="Int32" Name="Registration" Nullable="true" />
+          <Property Type="String" Name="GenderName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="DepartmentName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ShiftName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="SemisterName" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="SP_SHIFT_GENDER_WISE_SUMMARY_Result">
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="32" />
+          <Property Type="Int32" Name="Roll" Nullable="true" />
+          <Property Type="Int32" Name="Registration" Nullable="true" />
+          <Property Type="String" Name="GenderName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="DepartmentName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ShiftName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="SemisterName" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="SP_SHIFT_SEMESTER_WISE_DETAIL_Result">
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="32" />
+          <Property Type="Int32" Name="Roll" Nullable="true" />
+          <Property Type="Int32" Name="Registration" Nullable="true" />
+          <Property Type="String" Name="GenderName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="DepartmentName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ShiftName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="SemisterName" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="SP_SHIFT_WISE_SUMMAY_Result">
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="32" />
+          <Property Type="Int32" Name="Roll" Nullable="true" />
+          <Property Type="Int32" Name="Registration" Nullable="true" />
+          <Property Type="String" Name="GenderName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="DepartmentName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ShiftName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="SemisterName" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="SP_LAST_TOTAL_AMOUNT_DAY_WISE_SYMMARY_Result">
+          <Property Type="Decimal" Name="ExpansesMoney" Nullable="true" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="SP_LAST_TOTAL_AMOUNT_Result">
+          <Property Type="Decimal" Name="Money" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="Credit_Money" Nullable="true" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="SP_EXPANSESDAYWISEDISPLAY_Result1">
+          <Property Type="DateTime" Name="Date" Nullable="true" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="32" />
+          <Property Type="Decimal" Name="GivenMoney" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="ExpansesMoney" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="ReturnMoney" Nullable="true" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="SP_XXXXXXXXXXXXXXXXXXX_Result">
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="32" />
+          <Property Type="Int32" Name="Mil" Nullable="true" />
+          <Property Type="Decimal" Name="ExpansesMoney" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="Money" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="Credit_Money" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="Total" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="Total_Balance" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="Mil_Rate" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="Total_Expenses" Nullable="true" Precision="19" />
+          <Property Type="Decimal" Name="TT" Nullable="true" Precision="19" />
+        </ComplexType>
+        <ComplexType Name="SP_ALL_Result">
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="32" />
+          <Property Type="Int32" Name="Roll" Nullable="true" />
+          <Property Type="Int32" Name="Registration" Nullable="true" />
+          <Property Type="String" Name="GenderName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="DepartmentName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="ShiftName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="SemisterName" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <EntityType Name="DepartmentInfo">
+          <Key>
+            <PropertyRef Name="DepartmentId" />
+          </Key>
+          <Property Type="Int32" Name="DepartmentId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="DepartmentName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="StudentInformations" Relationship="DORMITORYModel.FK_StudentInformation_DepartmentInfo" FromRole="DepartmentInfo" ToRole="StudentInformation" />
+        </EntityType>
+        <EntityType Name="DipositMoneyDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="Date" />
+          <Property Type="Int32" Name="GiverId" />
+          <Property Type="Int32" Name="ReciverId" />
+          <Property Type="Int32" Name="PurposeId" />
+          <Property Type="Decimal" Name="Money" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="Credit_Money" Precision="19" Scale="4" />
+          <NavigationProperty Name="PurposeInfo" Relationship="DORMITORYModel.FK_DipositMoneyDetail_PurposeInfo" FromRole="DipositMoneyDetail" ToRole="PurposeInfo" />
+          <NavigationProperty Name="StudentInformation" Relationship="DORMITORYModel.FK_DipositMoneyDetail_StudentInformation" FromRole="DipositMoneyDetail" ToRole="StudentInformation" />
+          <NavigationProperty Name="StudentInformation1" Relationship="DORMITORYModel.FK_DipositMoneyDetail_StudentInformation1" FromRole="DipositMoneyDetail" ToRole="StudentInformation" />
+        </EntityType>
+        <EntityType Name="ExpenditureDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="Date" />
+          <Property Type="Int32" Name="StudentId" />
+          <Property Type="String" Name="WhichOneName" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ExpansesName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="GivenMoney" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="ExpansesMoney" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="ReturnMoney" Precision="19" Scale="4" />
+          <NavigationProperty Name="StudentInformation" Relationship="DORMITORYModel.FK_ExpenditurePaid_StudentInformation" FromRole="ExpenditureDetail" ToRole="StudentInformation" />
+        </EntityType>
+        <EntityType Name="GenderInfo">
+          <Key>
+            <PropertyRef Name="GenderId" />
+          </Key>
+          <Property Type="Int32" Name="GenderId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="GenderName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="StudentInformations" Relationship="DORMITORYModel.FK_StudentInformation_GenderInfo" FromRole="GenderInfo" ToRole="StudentInformation" />
+        </EntityType>
+        <EntityType Name="MilInfoDetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="Date" />
+          <Property Type="Int32" Name="StudentId" />
+          <Property Type="Int32" Name="Mil" />
+          <NavigationProperty Name="StudentInformation" Relationship="DORMITORYModel.FK_MilInfoDetail_StudentInformation" FromRole="MilInfoDetail" ToRole="StudentInformation" />
+        </EntityType>
+        <EntityType Name="PurposeInfo">
+          <Key>
+            <PropertyRef Name="PurposeId" />
+          </Key>
+          <Property Type="Int32" Name="PurposeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="PurposeName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="DipositMoneyDetails" Relationship="DORMITORYModel.FK_DipositMoneyDetail_PurposeInfo" FromRole="PurposeInfo" ToRole="DipositMoneyDetail" />
+        </EntityType>
+        <EntityType Name="SemisterInfo">
+          <Key>
+            <PropertyRef Name="SemisterId" />
+          </Key>
+          <Property Type="Int32" Name="SemisterId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="SemisterName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="StudentInformations" Relationship="DORMITORYModel.FK_StudentInformation_SemisterInfo" FromRole="SemisterInfo" ToRole="StudentInformation" />
+        </EntityType>
+        <EntityType Name="ShiftInfo">
+          <Key>
+            <PropertyRef Name="ShiftId" />
+          </Key>
+          <Property Type="Int32" Name="ShiftId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ShiftName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="StudentInformations" Relationship="DORMITORYModel.FK_StudentInformation_ShiftInfo" FromRole="ShiftInfo" ToRole="StudentInformation" />
+        </EntityType>
+        <EntityType Name="StudentInformation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Roll" />
+          <Property Type="Int32" Name="Registration" />
+          <Property Type="Int32" Name="SemisterId" />
+          <Property Type="Int32" Name="ShiftId" />
+          <Property Type="Int32" Name="DepartmentId" />
+          <Property Type="Int32" Name="GenderId" />
+          <Property Type="String" Name="Address" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Phone" />
+          <Property Type="DateTime" Name="DateOfBirth" />
+          <NavigationProperty Name="DepartmentInfo" Relationship="DORMITORYModel.FK_StudentInformation_DepartmentInfo" FromRole="StudentInformation" ToRole="DepartmentInfo" />
+          <NavigationProperty Name="DipositMoneyDetails" Relationship="DORMITORYModel.FK_DipositMoneyDetail_StudentInformation" FromRole="StudentInformation" ToRole="DipositMoneyDetail" />
+          <NavigationProperty Name="DipositMoneyDetails1" Relationship="DORMITORYModel.FK_DipositMoneyDetail_StudentInformation1" FromRole="StudentInformation" ToRole="DipositMoneyDetail" />
+          <NavigationProperty Name="ExpenditureDetails" Relationship="DORMITORYModel.FK_ExpenditurePaid_StudentInformation" FromRole="StudentInformation" ToRole="ExpenditureDetail" />
+          <NavigationProperty Name="GenderInfo" Relationship="DORMITORYModel.FK_StudentInformation_GenderInfo" FromRole="StudentInformation" ToRole="GenderInfo" />
+          <NavigationProperty Name="MilInfoDetails" Relationship="DORMITORYModel.FK_MilInfoDetail_StudentInformation" FromRole="StudentInformation" ToRole="MilInfoDetail" />
+          <NavigationProperty Name="SemisterInfo" Relationship="DORMITORYModel.FK_StudentInformation_SemisterInfo" FromRole="StudentInformation" ToRole="SemisterInfo" />
+          <NavigationProperty Name="ShiftInfo" Relationship="DORMITORYModel.FK_StudentInformation_ShiftInfo" FromRole="StudentInformation" ToRole="ShiftInfo" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="principal_id" Nullable="false" />
+          <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="version" />
+          <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_StudentInformation_DepartmentInfo">
+          <End Type="DORMITORYModel.DepartmentInfo" Role="DepartmentInfo" Multiplicity="0..1" />
+          <End Type="DORMITORYModel.StudentInformation" Role="StudentInformation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DepartmentInfo">
+              <PropertyRef Name="DepartmentId" />
+            </Principal>
+            <Dependent Role="StudentInformation">
+              <PropertyRef Name="DepartmentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DipositMoneyDetail_PurposeInfo">
+          <End Type="DORMITORYModel.PurposeInfo" Role="PurposeInfo" Multiplicity="0..1" />
+          <End Type="DORMITORYModel.DipositMoneyDetail" Role="DipositMoneyDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PurposeInfo">
+              <PropertyRef Name="PurposeId" />
+            </Principal>
+            <Dependent Role="DipositMoneyDetail">
+              <PropertyRef Name="PurposeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DipositMoneyDetail_StudentInformation">
+          <End Type="DORMITORYModel.StudentInformation" Role="StudentInformation" Multiplicity="0..1" />
+          <End Type="DORMITORYModel.DipositMoneyDetail" Role="DipositMoneyDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StudentInformation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DipositMoneyDetail">
+              <PropertyRef Name="GiverId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DipositMoneyDetail_StudentInformation1">
+          <End Type="DORMITORYModel.StudentInformation" Role="StudentInformation" Multiplicity="0..1" />
+          <End Type="DORMITORYModel.DipositMoneyDetail" Role="DipositMoneyDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StudentInformation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DipositMoneyDetail">
+              <PropertyRef Name="ReciverId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ExpenditurePaid_StudentInformation">
+          <End Type="DORMITORYModel.StudentInformation" Role="StudentInformation" Multiplicity="0..1" />
+          <End Type="DORMITORYModel.ExpenditureDetail" Role="ExpenditureDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StudentInformation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ExpenditureDetail">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentInformation_GenderInfo">
+          <End Type="DORMITORYModel.GenderInfo" Role="GenderInfo" Multiplicity="0..1" />
+          <End Type="DORMITORYModel.StudentInformation" Role="StudentInformation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GenderInfo">
+              <PropertyRef Name="GenderId" />
+            </Principal>
+            <Dependent Role="StudentInformation">
+              <PropertyRef Name="GenderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MilInfoDetail_StudentInformation">
+          <End Type="DORMITORYModel.StudentInformation" Role="StudentInformation" Multiplicity="0..1" />
+          <End Type="DORMITORYModel.MilInfoDetail" Role="MilInfoDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StudentInformation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MilInfoDetail">
+              <PropertyRef Name="StudentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentInformation_SemisterInfo">
+          <End Type="DORMITORYModel.SemisterInfo" Role="SemisterInfo" Multiplicity="0..1" />
+          <End Type="DORMITORYModel.StudentInformation" Role="StudentInformation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SemisterInfo">
+              <PropertyRef Name="SemisterId" />
+            </Principal>
+            <Dependent Role="StudentInformation">
+              <PropertyRef Name="SemisterId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_StudentInformation_ShiftInfo">
+          <End Type="DORMITORYModel.ShiftInfo" Role="ShiftInfo" Multiplicity="0..1" />
+          <End Type="DORMITORYModel.StudentInformation" Role="StudentInformation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ShiftInfo">
+              <PropertyRef Name="ShiftId" />
+            </Principal>
+            <Dependent Role="StudentInformation">
+              <PropertyRef Name="ShiftId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL_Result">
+          <Property Type="Decimal" Name="Credit_Money" Nullable="true" Precision="19" />
+        </ComplexType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DORMITORYModelStoreContainer" CdmEntityContainer="DORMITORYEntities">
+          <FunctionImportMapping FunctionImportName="SP_GRIDVIEWDISPLAY" FunctionName="DORMITORYModel.Store.SP_GRIDVIEWDISPLAY">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_GRIDVIEWDISPLAY_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Roll" ColumnName="Roll" />
+                <ScalarProperty Name="Registration" ColumnName="Registration" />
+                <ScalarProperty Name="SemisterName" ColumnName="SemisterName" />
+                <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="ShiftName" ColumnName="ShiftName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_GRIDVIEWDIPOSIT" FunctionName="DORMITORYModel.Store.SP_GRIDVIEWDIPOSIT">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_GRIDVIEWDIPOSIT_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ReciverId" ColumnName="ReciverId" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Money" ColumnName="Money" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_WITHDRAWGRIDVIEW" FunctionName="DORMITORYModel.Store.SP_WITHDRAWGRIDVIEW">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_WITHDRAWGRIDVIEW_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="PurposeName" ColumnName="PurposeName" />
+                <ScalarProperty Name="Credit_Money" ColumnName="Credit_Money" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_TOTALAMOUNTGRIDVIEW" FunctionName="DORMITORYModel.Store.SP_TOTALAMOUNTGRIDVIEW">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_TOTALAMOUNTGRIDVIEW_Result">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Money" ColumnName="Money" />
+                <ScalarProperty Name="Credit_Money" ColumnName="Credit_Money" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_REPORTGIVERANDRICEVERWISE" FunctionName="DORMITORYModel.Store.SP_REPORTGIVERANDRICEVERWISE">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_REPORTGIVERANDRICEVERWISE_Result">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Money" ColumnName="Money" />
+                <ScalarProperty Name="Credit_Money" ColumnName="Credit_Money" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_DAYBYDAYTOTALAMOUNT" FunctionName="DORMITORYModel.Store.SP_DAYBYDAYTOTALAMOUNT">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_DAYBYDAYTOTALAMOUNT_Result">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Money" ColumnName="Money" />
+                <ScalarProperty Name="Credit_Money" ColumnName="Credit_Money" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_GIVERANDDAYWISESUMMYDISPLAY" FunctionName="DORMITORYModel.Store.SP_GIVERANDDAYWISESUMMYDISPLAY">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_GIVERANDDAYWISESUMMYDISPLAY_Result1">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Money" ColumnName="Money" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_DAYANDRICEVERWISESUMMARY" FunctionName="DORMITORYModel.Store.SP_DAYANDRICEVERWISESUMMARY">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_DAYANDRICEVERWISESUMMARY_Result">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="PurposeName" ColumnName="PurposeName" />
+                <ScalarProperty Name="Money" ColumnName="Money" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_MILDISPLAY" FunctionName="DORMITORYModel.Store.SP_MILDISPLAY">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_MILDISPLAY_Result">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Mil" ColumnName="Mil" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_NAMEWISEMILSUMMAY" FunctionName="DORMITORYModel.Store.SP_NAMEWISEMILSUMMAY">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_NAMEWISEMILSUMMAY_Result">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Mil" ColumnName="Mil" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_DAYWISEMILSUMMARY" FunctionName="DORMITORYModel.Store.SP_DAYWISEMILSUMMARY">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_DAYWISEMILSUMMARY_Result">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Mil" ColumnName="Mil" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_NAMEANDDATEWISEMILSUMMARY" FunctionName="DORMITORYModel.Store.SP_NAMEANDDATEWISEMILSUMMARY">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_NAMEANDDATEWISEMILSUMMARY_Result">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Mil" ColumnName="Mil" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_EXPANSESDISPLAY" FunctionName="DORMITORYModel.Store.SP_EXPANSESDISPLAY">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_EXPANSESDISPLAY_Result">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="WhichOneName" ColumnName="WhichOneName" />
+                <ScalarProperty Name="ExpansesName" ColumnName="ExpansesName" />
+                <ScalarProperty Name="GivenMoney" ColumnName="GivenMoney" />
+                <ScalarProperty Name="ExpansesMoney" ColumnName="ExpansesMoney" />
+                <ScalarProperty Name="ReturnMoney" ColumnName="ReturnMoney" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_EXPANSESDAYWISEDISPLAY" FunctionName="DORMITORYModel.Store.SP_EXPANSESDAYWISEDISPLAY">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_EXPANSESDAYWISEDISPLAY_Result1">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="GivenMoney" ColumnName="GivenMoney" />
+                <ScalarProperty Name="ExpansesMoney" ColumnName="ExpansesMoney" />
+                <ScalarProperty Name="ReturnMoney" ColumnName="ReturnMoney" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_EXPANSESDAYANDNAMEWISE" FunctionName="DORMITORYModel.Store.SP_EXPANSESDAYANDNAMEWISE">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_EXPANSESDAYANDNAMEWISE_Result">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="ExpansesName" ColumnName="ExpansesName" />
+                <ScalarProperty Name="WhichOneName" ColumnName="WhichOneName" />
+                <ScalarProperty Name="GivenMoney" ColumnName="GivenMoney" />
+                <ScalarProperty Name="ExpansesMoney" ColumnName="ExpansesMoney" />
+                <ScalarProperty Name="ReturnMoney" ColumnName="ReturnMoney" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_PURPOSEANDDAYWISEDETAIL" FunctionName="DORMITORYModel.Store.SP_PURPOSEANDDAYWISEDETAIL">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_PURPOSEANDDAYWISEDETAIL_Result">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Money" ColumnName="Money" />
+                <ScalarProperty Name="Credit_Money" ColumnName="Credit_Money" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_SHOWMILDAYWISE" FunctionName="DORMITORYModel.Store.SP_SHOWMILDAYWISE">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_SHOWMILDAYWISE_Result">
+                <ScalarProperty Name="Mil" ColumnName="Mil" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_TOTALEXPANSESDAYWISE" FunctionName="DORMITORYModel.Store.SP_TOTALEXPANSESDAYWISE">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_TOTALEXPANSESDAYWISE_Result">
+                <ScalarProperty Name="ExpansesMoney" ColumnName="ExpansesMoney" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_NAMEANDDAYWISEDIPOSITDETAIL" FunctionName="DORMITORYModel.Store.SP_NAMEANDDAYWISEDIPOSITDETAIL">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_NAMEANDDAYWISEDIPOSITDETAIL_Result1">
+                <ScalarProperty Name="Money" ColumnName="Money" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_NAMEANDDAYWISEMILDETAIL" FunctionName="DORMITORYModel.Store.SP_NAMEANDDAYWISEMILDETAIL">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_NAMEANDDAYWISEMILDETAIL_Result1">
+                <ScalarProperty Name="Mil" ColumnName="Mil" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_DEPARTMENT_WISE_SUMMARY" FunctionName="DORMITORYModel.Store.SP_DEPARTMENT_WISE_SUMMARY">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_DEPARTMENT_WISE_SUMMARY_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Roll" ColumnName="Roll" />
+                <ScalarProperty Name="Registration" ColumnName="Registration" />
+                <ScalarProperty Name="GenderName" ColumnName="GenderName" />
+                <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+                <ScalarProperty Name="ShiftName" ColumnName="ShiftName" />
+                <ScalarProperty Name="SemisterName" ColumnName="SemisterName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_GENDER_DEPARTMENT_WISE_SUMMARY" FunctionName="DORMITORYModel.Store.SP_GENDER_DEPARTMENT_WISE_SUMMARY">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_GENDER_DEPARTMENT_WISE_SUMMARY_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Roll" ColumnName="Roll" />
+                <ScalarProperty Name="Registration" ColumnName="Registration" />
+                <ScalarProperty Name="GenderName" ColumnName="GenderName" />
+                <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+                <ScalarProperty Name="ShiftName" ColumnName="ShiftName" />
+                <ScalarProperty Name="SemisterName" ColumnName="SemisterName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_GENDER_WISE_SUMAMRY" FunctionName="DORMITORYModel.Store.SP_GENDER_WISE_SUMAMRY">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_GENDER_WISE_SUMAMRY_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Roll" ColumnName="Roll" />
+                <ScalarProperty Name="Registration" ColumnName="Registration" />
+                <ScalarProperty Name="GenderName" ColumnName="GenderName" />
+                <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+                <ScalarProperty Name="ShiftName" ColumnName="ShiftName" />
+                <ScalarProperty Name="SemisterName" ColumnName="SemisterName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_SEMESTER_DEPARTMENT_WISE_SUMMAY" FunctionName="DORMITORYModel.Store.SP_SEMESTER_DEPARTMENT_WISE_SUMMAY">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_SEMESTER_DEPARTMENT_WISE_SUMMAY_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Roll" ColumnName="Roll" />
+                <ScalarProperty Name="Registration" ColumnName="Registration" />
+                <ScalarProperty Name="GenderName" ColumnName="GenderName" />
+                <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+                <ScalarProperty Name="ShiftName" ColumnName="ShiftName" />
+                <ScalarProperty Name="SemisterName" ColumnName="SemisterName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_SEMESTER_GENDER_WISE_SUMMARY" FunctionName="DORMITORYModel.Store.SP_SEMESTER_GENDER_WISE_SUMMARY">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_SEMESTER_GENDER_WISE_SUMMARY_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Roll" ColumnName="Roll" />
+                <ScalarProperty Name="Registration" ColumnName="Registration" />
+                <ScalarProperty Name="GenderName" ColumnName="GenderName" />
+                <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+                <ScalarProperty Name="ShiftName" ColumnName="ShiftName" />
+                <ScalarProperty Name="SemisterName" ColumnName="SemisterName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_SEMESTER_WISE_SUMMARY" FunctionName="DORMITORYModel.Store.SP_SEMESTER_WISE_SUMMARY">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_SEMESTER_WISE_SUMMARY_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Roll" ColumnName="Roll" />
+                <ScalarProperty Name="Registration" ColumnName="Registration" />
+                <ScalarProperty Name="GenderName" ColumnName="GenderName" />
+                <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+                <ScalarProperty Name="ShiftName" ColumnName="ShiftName" />
+                <ScalarProperty Name="SemisterName" ColumnName="SemisterName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_SHIFT_DEPARTMENT_WISE_SUMMAY" FunctionName="DORMITORYModel.Store.SP_SHIFT_DEPARTMENT_WISE_SUMMAY">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_SHIFT_DEPARTMENT_WISE_SUMMAY_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Roll" ColumnName="Roll" />
+                <ScalarProperty Name="Registration" ColumnName="Registration" />
+                <ScalarProperty Name="GenderName" ColumnName="GenderName" />
+                <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+                <ScalarProperty Name="ShiftName" ColumnName="ShiftName" />
+                <ScalarProperty Name="SemisterName" ColumnName="SemisterName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_SHIFT_GENDER_WISE_SUMMARY" FunctionName="DORMITORYModel.Store.SP_SHIFT_GENDER_WISE_SUMMARY">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_SHIFT_GENDER_WISE_SUMMARY_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Roll" ColumnName="Roll" />
+                <ScalarProperty Name="Registration" ColumnName="Registration" />
+                <ScalarProperty Name="GenderName" ColumnName="GenderName" />
+                <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+                <ScalarProperty Name="ShiftName" ColumnName="ShiftName" />
+                <ScalarProperty Name="SemisterName" ColumnName="SemisterName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_SHIFT_SEMESTER_WISE_DETAIL" FunctionName="DORMITORYModel.Store.SP_SHIFT_SEMESTER_WISE_DETAIL">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_SHIFT_SEMESTER_WISE_DETAIL_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Roll" ColumnName="Roll" />
+                <ScalarProperty Name="Registration" ColumnName="Registration" />
+                <ScalarProperty Name="GenderName" ColumnName="GenderName" />
+                <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+                <ScalarProperty Name="ShiftName" ColumnName="ShiftName" />
+                <ScalarProperty Name="SemisterName" ColumnName="SemisterName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_SHIFT_WISE_SUMMAY" FunctionName="DORMITORYModel.Store.SP_SHIFT_WISE_SUMMAY">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_SHIFT_WISE_SUMMAY_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Roll" ColumnName="Roll" />
+                <ScalarProperty Name="Registration" ColumnName="Registration" />
+                <ScalarProperty Name="GenderName" ColumnName="GenderName" />
+                <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+                <ScalarProperty Name="ShiftName" ColumnName="ShiftName" />
+                <ScalarProperty Name="SemisterName" ColumnName="SemisterName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_LAST_TOTAL_AMOUNT_DAY_WISE_SYMMARY" FunctionName="DORMITORYModel.Store.SP_LAST_TOTAL_AMOUNT_DAY_WISE_SYMMARY">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_LAST_TOTAL_AMOUNT_DAY_WISE_SYMMARY_Result">
+                <ScalarProperty Name="ExpansesMoney" ColumnName="ExpansesMoney" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_LAST_TOTAL_AMOUNT" FunctionName="DORMITORYModel.Store.SP_LAST_TOTAL_AMOUNT">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_LAST_TOTAL_AMOUNT_Result">
+                <ScalarProperty Name="Money" ColumnName="Money" />
+                <ScalarProperty Name="Credit_Money" ColumnName="Credit_Money" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_XXXXXXXXXXXXXXXXXXX" FunctionName="DORMITORYModel.Store.SP_XXXXXXXXXXXXXXXXXXX">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_XXXXXXXXXXXXXXXXXXX_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Mil" ColumnName="Mil" />
+                <ScalarProperty Name="ExpansesMoney" ColumnName="ExpansesMoney" />
+                <ScalarProperty Name="Money" ColumnName="Money" />
+                <ScalarProperty Name="Credit_Money" ColumnName="Credit_Money" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+                <ScalarProperty Name="Total_Balance" ColumnName="Total_Balance" />
+                <ScalarProperty Name="Mil_Rate" ColumnName="Mil_Rate" />
+                <ScalarProperty Name="Total_Expenses" ColumnName="Total_Expenses" />
+                <ScalarProperty Name="TT" ColumnName="TT" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_ALL" FunctionName="DORMITORYModel.Store.SP_ALL">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_ALL_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Roll" ColumnName="Roll" />
+                <ScalarProperty Name="Registration" ColumnName="Registration" />
+                <ScalarProperty Name="GenderName" ColumnName="GenderName" />
+                <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+                <ScalarProperty Name="ShiftName" ColumnName="ShiftName" />
+                <ScalarProperty Name="SemisterName" ColumnName="SemisterName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="DepartmentInfoes">
+            <EntityTypeMapping TypeName="DORMITORYModel.DepartmentInfo">
+              <MappingFragment StoreEntitySet="DepartmentInfo">
+                <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+                <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DipositMoneyDetails">
+            <EntityTypeMapping TypeName="DORMITORYModel.DipositMoneyDetail">
+              <MappingFragment StoreEntitySet="DipositMoneyDetail">
+                <ScalarProperty Name="Credit_Money" ColumnName="Credit_Money" />
+                <ScalarProperty Name="Money" ColumnName="Money" />
+                <ScalarProperty Name="PurposeId" ColumnName="PurposeId" />
+                <ScalarProperty Name="ReciverId" ColumnName="ReciverId" />
+                <ScalarProperty Name="GiverId" ColumnName="GiverId" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ExpenditureDetails">
+            <EntityTypeMapping TypeName="DORMITORYModel.ExpenditureDetail">
+              <MappingFragment StoreEntitySet="ExpenditureDetail">
+                <ScalarProperty Name="ReturnMoney" ColumnName="ReturnMoney" />
+                <ScalarProperty Name="ExpansesMoney" ColumnName="ExpansesMoney" />
+                <ScalarProperty Name="GivenMoney" ColumnName="GivenMoney" />
+                <ScalarProperty Name="ExpansesName" ColumnName="ExpansesName" />
+                <ScalarProperty Name="WhichOneName" ColumnName="WhichOneName" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GenderInfoes">
+            <EntityTypeMapping TypeName="DORMITORYModel.GenderInfo">
+              <MappingFragment StoreEntitySet="GenderInfo">
+                <ScalarProperty Name="GenderName" ColumnName="GenderName" />
+                <ScalarProperty Name="GenderId" ColumnName="GenderId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MilInfoDetails">
+            <EntityTypeMapping TypeName="DORMITORYModel.MilInfoDetail">
+              <MappingFragment StoreEntitySet="MilInfoDetail">
+                <ScalarProperty Name="Mil" ColumnName="Mil" />
+                <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PurposeInfoes">
+            <EntityTypeMapping TypeName="DORMITORYModel.PurposeInfo">
+              <MappingFragment StoreEntitySet="PurposeInfo">
+                <ScalarProperty Name="PurposeName" ColumnName="PurposeName" />
+                <ScalarProperty Name="PurposeId" ColumnName="PurposeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SemisterInfoes">
+            <EntityTypeMapping TypeName="DORMITORYModel.SemisterInfo">
+              <MappingFragment StoreEntitySet="SemisterInfo">
+                <ScalarProperty Name="SemisterName" ColumnName="SemisterName" />
+                <ScalarProperty Name="SemisterId" ColumnName="SemisterId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ShiftInfoes">
+            <EntityTypeMapping TypeName="DORMITORYModel.ShiftInfo">
+              <MappingFragment StoreEntitySet="ShiftInfo">
+                <ScalarProperty Name="ShiftName" ColumnName="ShiftName" />
+                <ScalarProperty Name="ShiftId" ColumnName="ShiftId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StudentInformations">
+            <EntityTypeMapping TypeName="DORMITORYModel.StudentInformation">
+              <MappingFragment StoreEntitySet="StudentInformation">
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="GenderId" ColumnName="GenderId" />
+                <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+                <ScalarProperty Name="ShiftId" ColumnName="ShiftId" />
+                <ScalarProperty Name="SemisterId" ColumnName="SemisterId" />
+                <ScalarProperty Name="Registration" ColumnName="Registration" />
+                <ScalarProperty Name="Roll" ColumnName="Roll" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="DORMITORYModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL" FunctionName="DORMITORYModel.Store.SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL_Result">
+                <ScalarProperty Name="Credit_Money" ColumnName="Credit_Money" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="DORMITORY">
+        <EntityTypeShape EntityType="DORMITORYModel.DepartmentInfo" Width="1.5" PointX="0.75" PointY="5.125" Height="1.5956835937500031" />
+        <EntityTypeShape EntityType="DORMITORYModel.DipositMoneyDetail" Width="1.5" PointX="5.25" PointY="2.375" Height="2.9417936197916674" />
+        <EntityTypeShape EntityType="DORMITORYModel.ExpenditureDetail" Width="1.5" PointX="5.25" PointY="6.875" Height="2.7494921875000031" />
+        <EntityTypeShape EntityType="DORMITORYModel.GenderInfo" Width="1.5" PointX="0.75" PointY="2.75" Height="1.5956835937500031" />
+        <EntityTypeShape EntityType="DORMITORYModel.MilInfoDetail" Width="1.5" PointX="5.25" PointY="10.375" Height="1.9802864583333388" />
+        <EntityTypeShape EntityType="DORMITORYModel.PurposeInfo" Width="1.5" PointX="3" PointY="1.125" Height="1.5956835937500031" />
+        <EntityTypeShape EntityType="DORMITORYModel.SemisterInfo" Width="1.5" PointX="0.75" PointY="8.125" Height="1.5956835937500031" />
+        <EntityTypeShape EntityType="DORMITORYModel.ShiftInfo" Width="1.5" PointX="0.75" PointY="10.375" Height="1.5956835937500031" />
+        <EntityTypeShape EntityType="DORMITORYModel.StudentInformation" Width="1.5" PointX="3" PointY="3.5" Height="4.6725065104166665" />
+        <EntityTypeShape EntityType="DORMITORYModel.sysdiagram" Width="1.5" PointX="7.75" PointY="0.75" Height="1.9802864583333388" />
+        <AssociationConnector Association="DORMITORYModel.FK_StudentInformation_DepartmentInfo" >
+          <ConnectorPoint PointX="2.25" PointY="5.9228417968750016" />
+          <ConnectorPoint PointX="3" PointY="5.9228417968750016" />
+        </AssociationConnector>
+        <AssociationConnector Association="DORMITORYModel.FK_DipositMoneyDetail_PurposeInfo" >
+          <ConnectorPoint PointX="4.5" PointY="2.5478417968750016" />
+          <ConnectorPoint PointX="5.25" PointY="2.5478417968750016" />
+        </AssociationConnector>
+        <AssociationConnector Association="DORMITORYModel.FK_DipositMoneyDetail_StudentInformation" >
+          <ConnectorPoint PointX="4.5" PointY="4.4083968098958337" />
+          <ConnectorPoint PointX="5.25" PointY="4.4083968098958337" />
+        </AssociationConnector>
+        <AssociationConnector Association="DORMITORYModel.FK_DipositMoneyDetail_StudentInformation1" >
+          <ConnectorPoint PointX="4.5" PointY="3.8916984049479169" />
+          <ConnectorPoint PointX="5.25" PointY="3.8916984049479169" />
+        </AssociationConnector>
+        <AssociationConnector Association="DORMITORYModel.FK_ExpenditurePaid_StudentInformation" >
+          <ConnectorPoint PointX="4.5" PointY="7.5237532552083337" />
+          <ConnectorPoint PointX="5.25" PointY="7.5237532552083337" />
+        </AssociationConnector>
+        <AssociationConnector Association="DORMITORYModel.FK_StudentInformation_GenderInfo" >
+          <ConnectorPoint PointX="2.25" PointY="3.9228417968750016" />
+          <ConnectorPoint PointX="3" PointY="3.9228417968750016" />
+        </AssociationConnector>
+        <AssociationConnector Association="DORMITORYModel.FK_MilInfoDetail_StudentInformation" >
+          <ConnectorPoint PointX="3.75" PointY="8.1725065104166674" />
+          <ConnectorPoint PointX="3.75" PointY="11.365143229166669" />
+          <ConnectorPoint PointX="5.25" PointY="11.365143229166669" />
+        </AssociationConnector>
+        <AssociationConnector Association="DORMITORYModel.FK_StudentInformation_SemisterInfo" >
+          <ConnectorPoint PointX="2.25" PointY="8.977847552083329" />
+          <ConnectorPoint PointX="3.3437475" PointY="8.977847552083329" />
+          <ConnectorPoint PointX="3.3437475" PointY="8.1725065104166674" />
+        </AssociationConnector>
+        <AssociationConnector Association="DORMITORYModel.FK_StudentInformation_ShiftInfo" >
+          <ConnectorPoint PointX="2.25" PointY="10.870071614583335" />
+          <ConnectorPoint PointX="3.6666666666666665" PointY="10.870071614583335" />
+          <ConnectorPoint PointX="3.8333333333333335" PointY="10.870071614583335" />
+          <ConnectorPoint PointX="4.1562525" PointY="10.870071614583335" />
+          <ConnectorPoint PointX="4.1562525" PointY="8.1725065104166674" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

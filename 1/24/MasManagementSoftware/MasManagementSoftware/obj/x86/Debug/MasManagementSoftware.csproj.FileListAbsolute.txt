@@ -1,0 +1,61 @@
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.MotherForm.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.Properties.Resources.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.csproj.GenerateResource.Cache
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.AddDepartmentForm.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.AddStudentInformatio.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.csprojResolveAssemblyReference.cache
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.PurposeForm.resources
+E:\Softwer Devolopment\Dormitory\1\MasManagementSoftware\MasManagementSoftware\bin\Debug\MasManagementSoftware.exe.config
+E:\Softwer Devolopment\Dormitory\1\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.exe
+E:\Softwer Devolopment\Dormitory\1\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.pdb
+E:\Softwer Devolopment\Dormitory\1\MasManagementSoftware\MasManagementSoftware\bin\Debug\MasManagementSoftware.exe
+E:\Softwer Devolopment\Dormitory\1\MasManagementSoftware\MasManagementSoftware\bin\Debug\MasManagementSoftware.pdb
+E:\Softwer Devolopment\Dormitory\1\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.csprojResolveAssemblyReference.cache
+E:\Softwer Devolopment\Dormitory\1\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.AddDepartmentForm.resources
+E:\Softwer Devolopment\Dormitory\1\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.AddStudentInformatio.resources
+E:\Softwer Devolopment\Dormitory\1\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.MotherForm.resources
+E:\Softwer Devolopment\Dormitory\1\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.Properties.Resources.resources
+E:\Softwer Devolopment\Dormitory\1\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.PurposeForm.resources
+E:\Softwer Devolopment\Dormitory\1\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.csproj.GenerateResource.Cache
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.DipositFormcs.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.MoneyWithdrawForm.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.TotalAmountForm.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.GiveAndRicevedForm.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.DayByDayTotalAmountcs.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.DayAndGiverWiseSummary.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.DayAndRiceverWiseSummary.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.CountMilForm.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.dgvMilDisplay.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.DayWiseMilSummary.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.NameAndDayWiseMilSummaryForm.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.ExpansesPaidForm.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.DayWiseExpansesForm.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.DayAndNameWiseExpansesForm.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.PurposeWiseForm.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.MilRateForm.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\bin\Debug\A.R Hall.exe.config
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\bin\Debug\A.R Hall.exe.manifest
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\bin\Debug\A.R Hall.application
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\bin\Debug\A.R Hall.exe
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\bin\Debug\A.R Hall.pdb
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\A.R Hall.TrustInfo.xml
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\A.R Hall.exe.manifest
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\A.R Hall.application
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\A.R Hall.exe
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\A.R Hall.pdb
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.SemesterShiftGenderAndDepartmentWiseDetailForm.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.DepartmentWiseDetailForm.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.SemesterWiseDetailForm.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.ShiftWiseDetailForm.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.GenderWiseDetailForm.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.DepartmentAndGenderWiseDetailForm.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.SemesterAndGenderform.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.SemesterAndDepartmentForm.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.ShiftAndDepartmentForm.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.GenderAndShiftForm.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.SemesterAndShiftForm.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.TotalAmountLastForm.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.RPT_NameAndDayWisMilDetailReportViewerForm.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.RPT_ReportForm.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.RPT_DayWiseExpensesReportForm.resources
+C:\Users\Abdullah  IT  Zone\Desktop\MasManagementSoftware\MasManagementSoftware\obj\x86\Debug\MasManagementSoftware.RPT_DayWiseMilReportForm.resources
