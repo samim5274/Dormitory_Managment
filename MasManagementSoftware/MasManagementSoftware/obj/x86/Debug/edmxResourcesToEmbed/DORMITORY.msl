@@ -367,6 +367,13 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL" FunctionName="DORMITORYModel.Store.SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DORMITORYModel.SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL_Result">
+          <ScalarProperty Name="Credit_Money" ColumnName="Credit_Money" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
     <EntitySetMapping Name="DepartmentInfoes">
       <EntityTypeMapping TypeName="DORMITORYModel.DepartmentInfo">
         <MappingFragment StoreEntitySet="DepartmentInfo">
@@ -461,23 +468,5 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="DORMITORYModel.sysdiagram">
-        <MappingFragment StoreEntitySet="sysdiagrams">
-          <ScalarProperty Name="definition" ColumnName="definition" />
-          <ScalarProperty Name="version" ColumnName="version" />
-          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-          <ScalarProperty Name="name" ColumnName="name" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL" FunctionName="DORMITORYModel.Store.SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="DORMITORYModel.SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL_Result">
-          <ScalarProperty Name="Credit_Money" ColumnName="Credit_Money" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

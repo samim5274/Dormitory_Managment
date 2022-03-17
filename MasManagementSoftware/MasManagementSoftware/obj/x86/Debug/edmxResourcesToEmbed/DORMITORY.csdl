@@ -126,6 +126,11 @@
       <Parameter Name="DEPARTMENT" Mode="In" Type="Int32" />
       <Parameter Name="GENDER" Mode="In" Type="Int32" />
     </FunctionImport>
+    <FunctionImport Name="SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL" ReturnType="Collection(DORMITORYModel.SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL_Result)">
+      <Parameter Name="SDATE" Mode="In" Type="DateTime" />
+      <Parameter Name="EDATE" Mode="In" Type="DateTime" />
+      <Parameter Name="NAME" Mode="In" Type="Int32" />
+    </FunctionImport>
     <EntitySet Name="DepartmentInfoes" EntityType="DORMITORYModel.DepartmentInfo" />
     <EntitySet Name="DipositMoneyDetails" EntityType="DORMITORYModel.DipositMoneyDetail" />
     <EntitySet Name="ExpenditureDetails" EntityType="DORMITORYModel.ExpenditureDetail" />
@@ -135,7 +140,6 @@
     <EntitySet Name="SemisterInfoes" EntityType="DORMITORYModel.SemisterInfo" />
     <EntitySet Name="ShiftInfoes" EntityType="DORMITORYModel.ShiftInfo" />
     <EntitySet Name="StudentInformations" EntityType="DORMITORYModel.StudentInformation" />
-    <EntitySet Name="sysdiagrams" EntityType="DORMITORYModel.sysdiagram" />
     <AssociationSet Name="FK_StudentInformation_DepartmentInfo" Association="DORMITORYModel.FK_StudentInformation_DepartmentInfo">
       <End Role="DepartmentInfo" EntitySet="DepartmentInfoes" />
       <End Role="StudentInformation" EntitySet="StudentInformations" />
@@ -172,11 +176,6 @@
       <End Role="ShiftInfo" EntitySet="ShiftInfoes" />
       <End Role="StudentInformation" EntitySet="StudentInformations" />
     </AssociationSet>
-    <FunctionImport Name="SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL" ReturnType="Collection(DORMITORYModel.SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL_Result)">
-      <Parameter Name="SDATE" Mode="In" Type="DateTime" />
-      <Parameter Name="EDATE" Mode="In" Type="DateTime" />
-      <Parameter Name="NAME" Mode="In" Type="Int32" />
-    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="SP_GRIDVIEWDISPLAY_Result">
     <Property Type="String" Name="Name" Nullable="true" MaxLength="32" />
@@ -426,6 +425,9 @@
     <Property Type="String" Name="ShiftName" Nullable="true" MaxLength="50" />
     <Property Type="String" Name="SemisterName" Nullable="true" MaxLength="50" />
   </ComplexType>
+  <ComplexType Name="SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL_Result">
+    <Property Type="Decimal" Name="Credit_Money" Nullable="true" Precision="19" />
+  </ComplexType>
   <EntityType Name="DepartmentInfo">
     <Key>
       <PropertyRef Name="DepartmentId" />
@@ -528,16 +530,6 @@
     <NavigationProperty Name="MilInfoDetails" Relationship="DORMITORYModel.FK_MilInfoDetail_StudentInformation" FromRole="StudentInformation" ToRole="MilInfoDetail" />
     <NavigationProperty Name="SemisterInfo" Relationship="DORMITORYModel.FK_StudentInformation_SemisterInfo" FromRole="StudentInformation" ToRole="SemisterInfo" />
     <NavigationProperty Name="ShiftInfo" Relationship="DORMITORYModel.FK_StudentInformation_ShiftInfo" FromRole="StudentInformation" ToRole="ShiftInfo" />
-  </EntityType>
-  <EntityType Name="sysdiagram">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-    <Property Type="Int32" Name="principal_id" Nullable="false" />
-    <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Type="Int32" Name="version" />
-    <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <Association Name="FK_StudentInformation_DepartmentInfo">
     <End Type="DORMITORYModel.DepartmentInfo" Role="DepartmentInfo" Multiplicity="0..1" />
@@ -647,7 +639,4 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <ComplexType Name="SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL_Result">
-    <Property Type="Decimal" Name="Credit_Money" Nullable="true" Precision="19" />
-  </ComplexType>
 </Schema>

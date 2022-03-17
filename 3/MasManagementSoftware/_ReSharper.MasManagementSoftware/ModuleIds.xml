@@ -1,0 +1,5 @@
+<Modules>
+  <Module PersistentId="7811C421-DA1E-415F-A6FC-7B38D704B3B8" ModuleId="MasManagementSoftware" />
+  <Module PersistentId="d:Miscellaneous Files" ModuleId="System.Windows.Forms" />
+  <Module PersistentId="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System.Windows.Forms_1" />
+</Modules>

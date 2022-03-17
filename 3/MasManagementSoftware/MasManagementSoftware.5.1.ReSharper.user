@@ -1,0 +1,771 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:SemesterAndGenderform.cs" caret="784" fromTop="18" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:SemesterAndDepartmentForm.cs" caret="627" fromTop="12" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:ShiftWiseDetailForm.cs" caret="774" fromTop="27" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:GenderWiseDetailForm.cs" caret="787" fromTop="27" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:SemesterWiseDetailForm.cs" caret="585" fromTop="17" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:ShiftAndDepartmentForm.cs" caret="677" fromTop="19" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:SemesterAndShiftForm.cs" caret="1473" fromTop="22" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:GenderAndShiftForm.cs" caret="879" fromTop="9" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:DayByDayTotalAmountcs.cs" caret="942" fromTop="9" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:TotalAmountLastForm.cs" caret="1752" fromTop="17" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:NameAndDayWiseMilSummaryForm.cs" caret="1956" fromTop="18" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:RPT_DayWiseExpensesReportForm.Designer.cs" caret="2603" fromTop="24" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:RPT_NameAndDayWisMilDetailReportViewerForm.Designer.cs" caret="2491" fromTop="24" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:DayWiseExpansesForm.cs" caret="2292" fromTop="15" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:RPT_DayWiseMilReportForm.Designer.cs" caret="2583" fromTop="24" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:DayWiseMilSummary.cs" caret="2070" fromTop="28" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:GiveAndRicevedForm.cs" caret="2150" fromTop="26" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:MotherForm.Designer.cs" caret="33238" fromTop="13" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:SemesterShiftGenderAndDepartmentWiseDetailForm.cs" caret="2042" fromTop="15" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:DepartmentWiseDetailForm.cs" caret="1087" fromTop="12" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:MotherForm.cs" caret="2146" fromTop="9" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:TotalAmountForm.cs" caret="550" fromTop="0" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:AddDepartmentForm.cs" caret="1479" fromTop="10" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:CountMilForm.cs" caret="3131" fromTop="13" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:DipositFormcs.cs" caret="6465" fromTop="13" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:Program.cs" caret="490" fromTop="17" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:MilRateForm.cs" caret="1025" fromTop="4" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:Manager.cs" caret="546" fromTop="7" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:MoneyWithdrawForm.cs" caret="3197" fromTop="0" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:AddStudentInformatio.cs" caret="3029" fromTop="0" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:Manager.cs" caret="10927" fromTop="17" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:SemesterShiftGenderAndDepartmentWiseDetailForm.cs" caret="2225" fromTop="17" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:SemesterShiftGenderAndDepartmentWiseDetailForm.cs" caret="2458" fromTop="15" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:Manager.cs" caret="10895" fromTop="16" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:Manager.cs" caret="11216" fromTop="16" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:TotalAmountForm.cs" caret="651" fromTop="18" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:AddStudentInformatio.cs" caret="5600" fromTop="18" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:AddStudentInformatio.cs" caret="5600" fromTop="9" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:AddStudentInformatio.cs" caret="6697" fromTop="4" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:AddStudentInformatio.cs" caret="6697" fromTop="16" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:AddStudentInformatio.cs" caret="6697" fromTop="17" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:AddStudentInformatio.cs" caret="4662" fromTop="4" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:AddStudentInformatio.cs" caret="5600" fromTop="18" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:AddStudentInformatio.cs" caret="5757" fromTop="13" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:AddStudentInformatio.cs" caret="5600" fromTop="12" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:MotherForm.cs" caret="7282" fromTop="9" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:AddStudentInformatio.cs" caret="3804" fromTop="15" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:AddStudentInformatio.cs" caret="12688" fromTop="13" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:DipositFormcs.cs" caret="8000" fromTop="13" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:MilRateForm.cs" caret="5020" fromTop="12" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:Manager.cs" caret="11193" fromTop="22" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:MilRateForm.cs" caret="4083" fromTop="24" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:MilRateForm.cs" caret="4068" fromTop="23" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:Program.cs" caret="5813" fromTop="17" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:MilRateForm.cs" caret="3670" fromTop="22" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:Program.cs" caret="490" fromTop="17" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:MilRateForm.cs" caret="3616" fromTop="10" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:MilRateForm.cs" caret="5020" fromTop="52" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:AddStudentInformatio.cs" caret="8631" fromTop="11" />
+      <File id="7811C421-DA1E-415F-A6FC-7B38D704B3B8/f:MoneyWithdrawForm.cs" caret="6690" fromTop="0" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="var" priority="269" />
+      <Item value="new" priority="160" />
+      <Item value="Manager`0" priority="44" />
+      <Item value="object" priority="1" />
+      <Item value="obj" priority="61" />
+      <Item value="List" priority="44" />
+      <Item value="SP_GRIDVIEWDISPLAY_Result`0" priority="6" />
+      <Item value="DORMITORYEntities`0" priority="42" />
+      <Item value="contect" priority="0" />
+      <Item value="return" priority="35" />
+      <Item value="q" priority="36" />
+      <Item value="dgvStudentInfo" priority="3" />
+      <Item value="list" priority="56" />
+      <Item value="e" priority="3" />
+      <Item value="FillGrid`0" priority="3" />
+      <Item value="DipositFormcs`0" priority="3" />
+      <Item value="from" priority="1" />
+      <Item value="context" priority="35" />
+      <Item value="select" priority="0" />
+      <Item value="GG" priority="0" />
+      <Item value="cbxPurpose" priority="6" />
+      <Item value="cbxReciverName" priority="9" />
+      <Item value="cbxGiverName" priority="10" />
+      <Item value="ArgIterator`0" priority="0" />
+      <Item value="RR" priority="0" />
+      <Item value="DipositMoneyDetail`0" priority="2" />
+      <Item value="DIP" priority="7" />
+      <Item value="dtpDate" priority="4" />
+      <Item value="Convert`0" priority="57" />
+      <Item value="txtMoney" priority="4" />
+      <Item value="DOR" priority="9" />
+      <Item value="MessageBox`0" priority="14" />
+      <Item value="string" priority="14" />
+      <Item value="txtScarch" priority="1" />
+      <Item value="try" priority="12" />
+      <Item value="this" priority="5" />
+      <Item value="SP_GRIDVIEWDIPOSIT_Result`0" priority="1" />
+      <Item value="dtpDipositView" priority="2" />
+      <Item value="MotherForm`0" priority="8" />
+      <Item value="decimal" priority="0" />
+      <Item value="private" priority="2" />
+      <Item value="List&lt;DipositMoneyDetail&gt;" priority="0" />
+      <Item value="TT" priority="0" />
+      <Item value="x" priority="1" />
+      <Item value="txtTotalAmount" priority="6" />
+      <Item value="totalAmount" priority="0" />
+      <Item value="int" priority="11" />
+      <Item value="label8" priority="2" />
+      <Item value="for" priority="4" />
+      <Item value="DataGridView`0" priority="0" />
+      <Item value="double" priority="3" />
+      <Item value="sum" priority="2" />
+      <Item value="label7" priority="5" />
+      <Item value="Message`0" priority="0" />
+      <Item value="Exception`0" priority="0" />
+      <Item value="SRC" priority="7" />
+      <Item value="btnSave" priority="6" />
+      <Item value="false" priority="15" />
+      <Item value="true" priority="11" />
+      <Item value="MoneyWithdrawForm`0" priority="0" />
+      <Item value="SP_WITHDRAWGRIDVIEW_Result`0" priority="1" />
+      <Item value="dgvWithdraw" priority="6" />
+      <Item value="TotalAmountForm`0" priority="0" />
+      <Item value="SP_TOTALAMOUNTGRIDVIEW_Result`0" priority="0" />
+      <Item value="dgvTotalAmount" priority="1" />
+      <Item value="FillAmountDebit`0" priority="0" />
+      <Item value="float" priority="6" />
+      <Item value="label3" priority="1" />
+      <Item value="label5" priority="0" />
+      <Item value="txtDebitMoney" priority="0" />
+      <Item value="txtCreaditMoney" priority="0" />
+      <Item value="GiveAndRiceved`0" priority="1" />
+      <Item value="cbxTotalGiver" priority="1" />
+      <Item value="cbxTotalRicever" priority="1" />
+      <Item value="mngr" priority="18" />
+      <Item value="SP_REPORTGIVERANDRICEVERWISE_Result`0" priority="0" />
+      <Item value="Gid" priority="1" />
+      <Item value="Rid" priority="1" />
+      <Item value="dgvGiveAndRiceve" priority="1" />
+      <Item value="GIVERID" priority="0" />
+      <Item value="RICEVERID" priority="0" />
+      <Item value="DayByDayTotalAmountcs`0" priority="0" />
+      <Item value="dtpStartDate" priority="9" />
+      <Item value="dtpEndDate" priority="9" />
+      <Item value="btnShow" priority="3" />
+      <Item value="SP_DAYBYDAYTOTALAMOUNT_Result`0" priority="0" />
+      <Item value="STD" priority="2" />
+      <Item value="END" priority="4" />
+      <Item value="DateTime`0" priority="18" />
+      <Item value="STd" priority="1" />
+      <Item value="dgvDayWiseSummary" priority="4" />
+      <Item value="DayAndGiverWiseSummary`0" priority="0" />
+      <Item value="dtpStart" priority="1" />
+      <Item value="dtpEnd" priority="1" />
+      <Item value="SP_GIVERANDDAYWISESUMMYDISPLAY_Result`0" priority="0" />
+      <Item value="dgvDRs" priority="3" />
+      <Item value="SP_GIVERANDDAYWISESUMMYDISPLAY_Result1`0" priority="0" />
+      <Item value="DayAndRiceverWiseSummary`0" priority="0" />
+      <Item value="cbxRiceverName" priority="1" />
+      <Item value="SP_DAYANDRICEVERWISESUMMARY_Result`0" priority="0" />
+      <Item value="GIV" priority="0" />
+      <Item value="lblStatus" priority="1" />
+      <Item value="timer1" priority="1" />
+      <Item value="System" priority="2" />
+      <Item value="Timers" priority="2" />
+      <Item value="Timer`0" priority="2" />
+      <Item value="timer" priority="1" />
+      <Item value="invoke" priority="0" />
+      <Item value="MethodInvoker`0" priority="0" />
+      <Item value="delegate" priority="0" />
+      <Item value="Invoke`0" priority="0" />
+      <Item value="void" priority="0" />
+      <Item value="ElapsedEventArgs`0" priority="0" />
+      <Item value="CountMilForm`0" priority="0" />
+      <Item value="dtpMilDate" priority="4" />
+      <Item value="MilInfoDetail`0" priority="1" />
+      <Item value="Mil" priority="3" />
+      <Item value="cbxStudentName" priority="15" />
+      <Item value="txtMil" priority="6" />
+      <Item value="SP_MILDISPLAY_Result`0" priority="0" />
+      <Item value="dgvMil" priority="9" />
+      <Item value="UDOR" priority="1" />
+      <Item value="UMIL" priority="1" />
+      <Item value="btnUpdate" priority="2" />
+      <Item value="btnDelete" priority="2" />
+      <Item value="txtMilId" priority="1" />
+      <Item value="DMIL" priority="0" />
+      <Item value="NameWiseMilSummaryForm`0" priority="0" />
+      <Item value="cbxMilName" priority="8" />
+      <Item value="Nam" priority="0" />
+      <Item value="SP_NAMEWISEMILSUMMAY_Result`0" priority="0" />
+      <Item value="dgvMilDisplay`0" priority="0" />
+      <Item value="dgvNameWiseGrid" priority="2" />
+      <Item value="DayWiseMilSummary`0" priority="0" />
+      <Item value="SD" priority="21" />
+      <Item value="ED" priority="22" />
+      <Item value="SP_DAYWISEMILSUMMARY_Result`0" priority="1" />
+      <Item value="dgvDayWiseMilShow" priority="2" />
+      <Item value="NameAndDayWiseMilSummary`0" priority="0" />
+      <Item value="MN" priority="2" />
+      <Item value="SP_NAMEANDDATEWISEMILSUMMARY_Result`0" priority="0" />
+      <Item value="dgvDayAndNameWiseMilShow" priority="2" />
+      <Item value="ExpansesPaidForm`0" priority="0" />
+      <Item value="dtpExDate" priority="1" />
+      <Item value="CanRaiseEvents" priority="0" />
+      <Item value="ExpenditureDetail`0" priority="0" />
+      <Item value="EX" priority="7" />
+      <Item value="txtExpanserName" priority="2" />
+      <Item value="txtExName" priority="1" />
+      <Item value="txtGiveMoney" priority="2" />
+      <Item value="txtExMoney" priority="2" />
+      <Item value="txtReturnMoney" priority="3" />
+      <Item value="EXDOR" priority="1" />
+      <Item value="ThreadStaticAttribute`0" priority="0" />
+      <Item value="SP_EXPANSESDISPLAY_Result`0" priority="0" />
+      <Item value="dgvExpansesDisplay" priority="1" />
+      <Item value="DayWiseExpansesForm`0" priority="0" />
+      <Item value="SP_EXPANSESDAYWISEDISPLAY_Result`0" priority="0" />
+      <Item value="cbxName" priority="3" />
+      <Item value="DayAndNameWiseExpansesForm`0" priority="1" />
+      <Item value="EN" priority="1" />
+      <Item value="SP_EXPANSESDAYANDNAMEWISE_Result`0" priority="0" />
+      <Item value="dgvExNameAndDay" priority="0" />
+      <Item value="PurposeWiseForm`0" priority="0" />
+      <Item value="cbxPurposeName" priority="3" />
+      <Item value="PN" priority="1" />
+      <Item value="SP_PURPOSEANDDAYWISEDETAIL_Result`0" priority="1" />
+      <Item value="dgvPurposeAndDay" priority="0" />
+      <Item value="txtTotal" priority="2" />
+      <Item value="label11" priority="0" />
+      <Item value="label13" priority="0" />
+      <Item value="MilRateForm`0" priority="1" />
+      <Item value="SP_SHOWMILDAYWISE_Result`0" priority="0" />
+      <Item value="dgvTotalMil" priority="2" />
+      <Item value="lblTotalMil" priority="1" />
+      <Item value="mngr1" priority="0" />
+      <Item value="SP_TOTALEXPANSESDAYWISE_Result`0" priority="0" />
+      <Item value="dgvExTotal" priority="0" />
+      <Item value="list1" priority="1" />
+      <Item value="txtMilRate" priority="2" />
+      <Item value="lblTotalExpanses" priority="0" />
+      <Item value="mngr2" priority="0" />
+      <Item value="SN" priority="5" />
+      <Item value="SP_NAMEANDDAYWISEMILDETAIL_Result`0" priority="0" />
+      <Item value="ContextBoundObject`0" priority="1" />
+      <Item value="dgvSingelPersonMil" priority="0" />
+      <Item value="list2" priority="1" />
+      <Item value="mngr3" priority="0" />
+      <Item value="SP_NAMEANDDAYWISEDIPOSITDETAIL_Result`0" priority="0" />
+      <Item value="dgvsingelPersonDipositMoney" priority="0" />
+      <Item value="btnSingelPersonInfo" priority="1" />
+      <Item value="txtGiveOrTake" priority="0" />
+      <Item value="printDialog1" priority="1" />
+      <Item value="printPreviewDialog1" priority="1" />
+      <Item value="printDocument1" priority="0" />
+      <Item value="AddStudentInformatio`0" priority="0" />
+      <Item value="Font" priority="1" />
+      <Item value="Regular" priority="1" />
+      <Item value="Brushes`0" priority="1" />
+      <Item value="PointF" priority="0" />
+      <Item value="foreach" priority="0" />
+      <Item value="StudentInformation`0" priority="1" />
+      <Item value="nameDataGridViewTextBoxColumn" priority="0" />
+      <Item value="Name" priority="2" />
+      <Item value="cart" priority="0" />
+      <Item value="txtName" priority="2" />
+      <Item value="txtRoll" priority="1" />
+      <Item value="txtRegistration" priority="0" />
+      <Item value="cbxSemister" priority="0" />
+      <Item value="cbxShift" priority="17" />
+      <Item value="txtPhone" priority="0" />
+      <Item value="dtpDateOfBirth" priority="0" />
+      <Item value="public" priority="4" />
+      <Item value="Roll" priority="0" />
+      <Item value="Reg" priority="0" />
+      <Item value="sPGRIDVIEWDISPLAYBindingSource" priority="0" />
+      <Item value="i" priority="0" />
+      <Item value="ReportForm`0" priority="1" />
+      <Item value="rpt_StudentInforReport`0" priority="0" />
+      <Item value="reportViewer" priority="1" />
+      <Item value="RaisePaintEvent`0" priority="0" />
+      <Item value="rpt" priority="16" />
+      <Item value="SemesterShiftGenderAndDepartmentWiseDetailForm`0" priority="0" />
+      <Item value="cbxDepartment" priority="10" />
+      <Item value="cbxSemester" priority="10" />
+      <Item value="EnvironmentVariableTarget`0" priority="0" />
+      <Item value="cbxGender" priority="10" />
+      <Item value="DepartmentInfo`0" priority="8" />
+      <Item value="DepartmentId" priority="2" />
+      <Item value="DepartmentName" priority="2" />
+      <Item value="AllowDrop" priority="0" />
+      <Item value="Deplist" priority="0" />
+      <Item value="deplist" priority="0" />
+      <Item value="d" priority="5" />
+      <Item value="dlist" priority="8" />
+      <Item value="SP_SEMESTER_SHIFT_GENDER_and_DEPARTMENTWISESUMMARY_Result`0" priority="0" />
+      <Item value="Dep" priority="3" />
+      <Item value="Sem" priority="2" />
+      <Item value="Shf" priority="2" />
+      <Item value="Gen" priority="2" />
+      <Item value="DepartmentWiseDetailForm`0" priority="0" />
+      <Item value="dep" priority="11" />
+      <Item value="SP_DEPARTMENT_WISE_SUMMARY_Result`0" priority="0" />
+      <Item value="dgvDepartment" priority="0" />
+      <Item value="SemesterWiseDetailForm`0" priority="2" />
+      <Item value="ss" priority="0" />
+      <Item value="SP_SEMESTER_WISE_SUMMARY_Result`0" priority="0" />
+      <Item value="dgvSemester" priority="0" />
+      <Item value="ShiftWiseDetailForm`0" priority="0" />
+      <Item value="SP_SHIFT_WISE_SUMMAY_Result`0" priority="0" />
+      <Item value="shf" priority="0" />
+      <Item value="dgvShift" priority="0" />
+      <Item value="GenderWiseDetailForm`0" priority="0" />
+      <Item value="gen" priority="9" />
+      <Item value="SP_GENDER_WISE_SUMAMRY_Result`0" priority="0" />
+      <Item value="dgvGender" priority="0" />
+      <Item value="DepartmentAndGenderWiseDetailForm`0" priority="0" />
+      <Item value="SP_GENDER_DEPARTMENT_WISE_SUMMARY_Result`0" priority="1" />
+      <Item value="dgvDepAndGen" priority="0" />
+      <Item value="sem" priority="6" />
+      <Item value="SP_SEMESTER_GENDER_WISE_SUMMARY_Result`0" priority="0" />
+      <Item value="dgvSemAndGen" priority="0" />
+      <Item value="SemesterAndGenderform`0" priority="0" />
+      <Item value="SP_SEMESTER_DEPARTMENT_WISE_SUMMAY_Result`0" priority="0" />
+      <Item value="dgvSemAndDep" priority="0" />
+      <Item value="SemesterAndDepartmentForm`0" priority="0" />
+      <Item value="ShiftAndDepartmentForm`0" priority="0" />
+      <Item value="shif" priority="4" />
+      <Item value="SP_SHIFT_DEPARTMENT_WISE_SUMMAY_Result`0" priority="0" />
+      <Item value="dgvDepAndShift" priority="0" />
+      <Item value="SP_SHIFT_GENDER_WISE_SUMMARY_Result`0" priority="0" />
+      <Item value="dgvShiftAndGen" priority="0" />
+      <Item value="GenderAndShiftForm`0" priority="0" />
+      <Item value="SP_SHIFT_SEMESTER_WISE_DETAIL_Result`0" priority="0" />
+      <Item value="dgvShiftAndSem" priority="0" />
+      <Item value="SemesterAndShiftForm`0" priority="0" />
+      <Item value="TotalAmountLastForm`0" priority="0" />
+      <Item value="dtpSDate" priority="1" />
+      <Item value="dtpEDate" priority="0" />
+      <Item value="ConstraintException`0" priority="0" />
+      <Item value="SDate" priority="3" />
+      <Item value="EDate" priority="3" />
+      <Item value="SP_LAST_TOTAL_AMOUNT_DAY_WISE_SYMMARY_Result`0" priority="1" />
+      <Item value="dgvLastExpenses" priority="0" />
+      <Item value="SP_LAST_TOTAL_AMOUNT_Result`0" priority="0" />
+      <Item value="sDATE" priority="1" />
+      <Item value="dgvLastTotal" priority="0" />
+      <Item value="lblTotalDipo" priority="0" />
+      <Item value="rpt_NameAndDayWiseSummaryReport`0" priority="0" />
+      <Item value="ReportViewerForm`0" priority="3" />
+      <Item value="rptViewer" priority="3" />
+      <Item value="btnPrint" priority="3" />
+      <Item value="rpt_DayWiseExpensesDetail`0" priority="0" />
+      <Item value="RPT_DayWiseExpensesReportForm`0" priority="0" />
+      <Item value="retViewer" priority="1" />
+      <Item value="rpt_DayWiseMilReport`0" priority="0" />
+      <Item value="RPT_DayWiseMilReportForm`0" priority="0" />
+      <Item value="TextForm`0" priority="0" />
+      <Item value="ResponsiceForm`0" priority="1" />
+      <Item value="SP_XXXXXXXXXXXXXXXXXXX_Result`0" priority="0" />
+      <Item value="MDIParent1`0" priority="0" />
+      <Item value="AddDepartmentForm`0" priority="0" />
+      <Item value="MDI_MotherForm`0" priority="0" />
+      <Item value="txtDepartment" priority="0" />
+      <Item value="SP_ALL_Result`0" priority="0" />
+      <Item value="if" priority="0" />
+      <Item value="mnger4" priority="0" />
+      <Item value="list4" priority="0" />
+      <Item value="lblTotal" priority="1" />
+      <Item value="lblSingelPersolDipoMoney" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.DORMITORYEntities">
+      <Item value="SP_GRIDVIEWDISPLAY`0" priority="2" />
+      <Item value="StudentInformations" priority="3" />
+      <Item value="PurposeInfoes" priority="0" />
+      <Item value="AddToDipositMoneyDetails`0" priority="0" />
+      <Item value="SaveChanges`0" priority="5" />
+      <Item value="SP_GRIDVIEWDIPOSIT`0" priority="1" />
+      <Item value="DipositMoneyDetails" priority="0" />
+      <Item value="DeleteDatabase`0" priority="0" />
+      <Item value="DeleteObject`0" priority="2" />
+      <Item value="SP_WITHDRAWGRIDVIEW`0" priority="1" />
+      <Item value="SP_TOTALAMOUNTGRIDVIEW`0" priority="0" />
+      <Item value="SP_REPORTGIVERANDRICEVERWISE`0" priority="0" />
+      <Item value="SP_DAYBYDAYTOTALAMOUNT`0" priority="0" />
+      <Item value="SP_GIVERANDDAYWISESUMMYDISPLAY`0" priority="0" />
+      <Item value="SP_DAYANDRICEVERWISESUMMARY`0" priority="0" />
+      <Item value="AddToMilInfoDetails`0" priority="1" />
+      <Item value="SP_MILDISPLAY`0" priority="0" />
+      <Item value="MilInfoDetails" priority="0" />
+      <Item value="SP_NAMEWISEMILSUMMAY`0" priority="0" />
+      <Item value="SP_DAYWISEMILSUMMARY`0" priority="0" />
+      <Item value="SP_NAMEANDDATEWISEMILSUMMARY`0" priority="0" />
+      <Item value="AddToExpenditureDetails`0" priority="0" />
+      <Item value="SP_EXPANSESDISPLAY`0" priority="0" />
+      <Item value="SP_EXPANSESDAYWISEDISPLAY`0" priority="0" />
+      <Item value="SP_EXPANSESDAYANDNAMEWISE`0" priority="0" />
+      <Item value="SP_PURPOSEANDDAYWISEDETAIL`0" priority="0" />
+      <Item value="SP_SHOWMILDAYWISE`0" priority="1" />
+      <Item value="SP_TOTALEXPANSESDAYWISE`0" priority="0" />
+      <Item value="SP_NAMEANDDAYWISEMILDETAIL`0" priority="0" />
+      <Item value="SP_NAMEANDDAYWISEDIPOSITDETAIL`0" priority="0" />
+      <Item value="SP_SEMESTER_SHIFT_GENDER_and_DEPARTMENTWISESUMMARY`0" priority="0" />
+      <Item value="SP_DEPARTMENT_WISE_SUMMARY`0" priority="0" />
+      <Item value="SP_SEMESTER_WISE_SUMMARY`0" priority="0" />
+      <Item value="SP_SHIFT_WISE_SUMMAY`0" priority="0" />
+      <Item value="SP_GENDER_WISE_SUMAMRY`0" priority="0" />
+      <Item value="SP_GENDER_DEPARTMENT_WISE_SUMMARY`0" priority="1" />
+      <Item value="SP_SEMESTER_GENDER_WISE_SUMMARY`0" priority="0" />
+      <Item value="SP_SEMESTER_DEPARTMENT_WISE_SUMMAY`0" priority="0" />
+      <Item value="SP_SHIFT_DEPARTMENT_WISE_SUMMAY`0" priority="0" />
+      <Item value="SP_SHIFT_GENDER_WISE_SUMMARY`0" priority="0" />
+      <Item value="SP_SHIFT_SEMESTER_WISE_DETAIL`0" priority="0" />
+      <Item value="SP_LAST_TOTAL_AMOUNT_DAY_WISE_SYMMARY`0" priority="0" />
+      <Item value="SP_LAST_TOTAL_AMOUNT`0" priority="1" />
+      <Item value="SP_XXXXXXXXXXXXXXXXXXX`0" priority="0" />
+      <Item value="SP_ALL`0" priority="0" />
+      <Item value="SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Objects.ObjectResult`1">
+      <Item value="ToList`1" priority="33" />
+      <Item value="Dispose`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridView">
+      <Item value="DataSource" priority="33" />
+      <Item value="Rows" priority="5" />
+      <Item value="SelectedRows" priority="8" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.DipositFormcs">
+      <Item value="Show`0" priority="0" />
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
+      <Item value="ToList`1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.ComboBox">
+      <Item value="DisplayMember" priority="18" />
+      <Item value="ValueMember" priority="18" />
+      <Item value="DataSource" priority="18" />
+      <Item value="SelectedValue" priority="34" />
+      <Item value="Text" priority="6" />
+      <Item value="SelectedItem" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.Manager">
+      <Item value="GetAllGiver`0" priority="1" />
+      <Item value="GetAllReciver`0" priority="0" />
+      <Item value="GettAllStudentName`0" priority="4" />
+      <Item value="GetAllPurpose`0" priority="0" />
+      <Item value="GettAllDepartmetn`0" priority="2" />
+      <Item value="GetAllSemister`0" priority="1" />
+      <Item value="GetAllShift`0" priority="1" />
+      <Item value="GetAllGender`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.DipositMoneyDetail">
+      <Item value="Date" priority="2" />
+      <Item value="GiverId" priority="3" />
+      <Item value="ReciverId" priority="1" />
+      <Item value="PurposeId" priority="2" />
+      <Item value="Money" priority="7" />
+      <Item value="Credit_Money" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Convert">
+      <Item value="ToDateTime`0" priority="14" />
+      <Item value="ToInt32`0" priority="38" />
+      <Item value="ToDecimal`0" priority="3" />
+      <Item value="ToString`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.TextBox">
+      <Item value="Text" priority="32" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Trim`0" priority="14" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.MessageBox">
+      <Item value="Show`0" priority="14" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DateTimePicker">
+      <Item value="Value" priority="30" />
+      <Item value="Text" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="Empty" priority="14" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Sum`1" priority="0" />
+      <Item value="Where`1" priority="1" />
+      <Item value="AddRange`0" priority="3" />
+      <Item value="Add`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Decimal">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Nullable`1">
+      <Item value="ToString`0" priority="3" />
+      <Item value="Value" priority="0" />
+      <Item value="Equals`0" priority="0" />
+      <Item value="GetHashCode`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Label">
+      <Item value="Text" priority="13" />
+      <Item value="BackColor" priority="0" />
+      <Item value="BackgroundImageLayoutChanged" priority="0" />
+      <Item value="BackgroundImage" priority="0" />
+      <Item value="BackgroundImageLayout" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewRowCollection">
+      <Item value="Count" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Double">
+      <Item value="Parse`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewRow">
+      <Item value="Cells" priority="12" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.DataGridViewCell">
+      <Item value="Value" priority="12" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Object">
+      <Item value="ToString`0" priority="13" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ToString`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Windows.Forms.Message">
+      <Item value="Create`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Objects.ObjectSet`1">
+      <Item value="ToList`1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Int32">
+      <Item value="Parse`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="FirstOrDefault`1" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Button">
+      <Item value="Enabled" priority="16" />
+      <Item value="Focus`0" priority="0" />
+      <Item value="Visible" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.MoneyWithdrawForm">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.TotalAmountForm">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Single">
+      <Item value="Parse`0" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Single">
+      <Item value="ToString`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.GiveAndRiceved">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.DayByDayTotalAmountcs">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.DayAndGiverWiseSummary">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.DayAndRiceverWiseSummary">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="14" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.DateTime">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.Timer">
+      <Item value="Start`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Timers.Timer">
+      <Item value="Interval" priority="0" />
+      <Item value="Elapsed" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.CountMilForm">
+      <Item value="Show`0" priority="0" />
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.MilInfoDetail">
+      <Item value="Date" priority="0" />
+      <Item value="StudentId" priority="0" />
+      <Item value="Mil" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.NameWiseMilSummaryForm">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.DayWiseMilSummary">
+      <Item value="Show`0" priority="0" />
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.NameAndDayWiseMilSummary">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.ExpansesPaidForm">
+      <Item value="Show`0" priority="0" />
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.ExpenditureDetail">
+      <Item value="Date" priority="0" />
+      <Item value="StudentId" priority="0" />
+      <Item value="WhichOneName" priority="0" />
+      <Item value="ExpansesName" priority="0" />
+      <Item value="GivenMoney" priority="0" />
+      <Item value="ExpansesMoney" priority="0" />
+      <Item value="ReturnMoney" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.DayWiseExpansesForm">
+      <Item value="Show`0" priority="0" />
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.DayAndNameWiseExpansesForm">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.PurposeWiseForm">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.MilRateForm">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Forms.PrintPreviewDialog">
+      <Item value="Document" priority="0" />
+      <Item value="ShowDialog`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Printing.PrintPageEventArgs">
+      <Item value="Graphics" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Drawing.Graphics">
+      <Item value="DrawString`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.Brushes">
+      <Item value="Black" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Drawing.FontStyle">
+      <Item value="Bold" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Char">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Void">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.CartItem">
+      <Item value="Name" priority="2" />
+      <Item value="ToString`0" priority="0" />
+      <Item value="Dipartment" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@MasManagementSoftware.SP_GRIDVIEWDISPLAY_Result">
+      <Item value="EntityKeyPropertyName" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.ReportForm">
+      <Item value="ShowDialog`0" priority="1" />
+      <Item value="crystalReportViewer1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CrystalDecisions.Windows.Forms.CrystalReportViewer">
+      <Item value="Show`0" priority="0" />
+      <Item value="ReportSource" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.rpt_StudentInforReport">
+      <Item value="DataSourceConnections" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CrystalDecisions.Shared.DataSourceConnections">
+      <Item value="Clear`0" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.SemesterShiftGenderAndDepartmentWiseDetailForm">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.DepartmentInfo">
+      <Item value="DepartmentId" priority="2" />
+      <Item value="DepartmentName" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.DepartmentWiseDetailForm">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.SemesterWiseDetailForm">
+      <Item value="Show`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.ShiftWiseDetailForm">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.GenderWiseDetailForm">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.DepartmentAndGenderWiseDetailForm">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.SemesterAndGenderform">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.ShiftAndDepartmentForm">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.GenderAndShiftForm">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.SemesterAndShiftForm">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.TotalAmountLastForm">
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.rpt_NameAndDayWiseSummaryReport">
+      <Item value="SetParameterValue`0" priority="2" />
+      <Item value="DataSourceConnections" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.ReportViewerForm">
+      <Item value="crystalReportViewer1" priority="0" />
+      <Item value="ShowDialog`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.NameAndDayWiseMilSummaryForm">
+      <Item value="Close`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.rpt_DayWiseExpensesDetail">
+      <Item value="SetParameterValue`0" priority="1" />
+      <Item value="DataSourceConnections" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.RPT_DayWiseExpensesReportForm">
+      <Item value="crystalReportViewer1" priority="0" />
+      <Item value="ShowDialog`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.rpt_DayWiseMilReport">
+      <Item value="SetParameterValue`0" priority="1" />
+      <Item value="DataSourceConnections" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.RPT_DayWiseMilReportForm">
+      <Item value="ShowDialog`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.ResponsiceForm">
+      <Item value="Show`0" priority="0" />
+      <Item value="ShowDialog`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.AddDepartmentForm">
+      <Item value="MdiParent" priority="0" />
+      <Item value="Show`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:MasManagementSoftware.StudentInformation">
+      <Item value="Name" priority="0" />
+      <Item value="Roll" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>

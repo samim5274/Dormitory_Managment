@@ -15,7 +15,6 @@
           <EntitySet Name="SemisterInfo" EntityType="DORMITORYModel.Store.SemisterInfo" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="ShiftInfo" EntityType="DORMITORYModel.Store.ShiftInfo" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="StudentInformation" EntityType="DORMITORYModel.Store.StudentInformation" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="sysdiagrams" EntityType="DORMITORYModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
           <AssociationSet Name="FK_DipositMoneyDetail_PurposeInfo" Association="DORMITORYModel.Store.FK_DipositMoneyDetail_PurposeInfo">
             <End Role="PurposeInfo" EntitySet="PurposeInfo" />
             <End Role="DipositMoneyDetail" EntitySet="DipositMoneyDetail" />
@@ -138,16 +137,6 @@
           <Property Name="Phone" Type="int" />
           <Property Name="DateOfBirth" Type="date" />
         </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
-        </EntityType>
         <Association Name="FK_DipositMoneyDetail_PurposeInfo">
           <End Role="PurposeInfo" Type="DORMITORYModel.Store.PurposeInfo" Multiplicity="0..1" />
           <End Role="DipositMoneyDetail" Type="DORMITORYModel.Store.DipositMoneyDetail" Multiplicity="*" />
@@ -256,24 +245,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="SP_ALL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="SEMESTER" Type="int" Mode="In" />
           <Parameter Name="SHIFT" Type="int" Mode="In" />
           <Parameter Name="DEPARTMENT" Type="int" Mode="In" />
           <Parameter Name="GENDER" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-          <Parameter Name="version" Type="int" Mode="In" />
-          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-        </Function>
-        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-          <Parameter Name="version" Type="int" Mode="In" />
-          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
         </Function>
         <Function Name="SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="SDATE" Type="date" Mode="In" />
@@ -295,10 +271,6 @@
         </Function>
         <Function Name="SP_DEPARTMENT_WISE_SUMMARY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="DEPARTMENT" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
         </Function>
         <Function Name="SP_EXPANSESDAYANDNAMEWISE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="SDATE" Type="date" Mode="In" />
@@ -324,14 +296,6 @@
         </Function>
         <Function Name="SP_GRIDVIEWDIPOSIT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="SP_GRIDVIEWDISPLAY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-        </Function>
         <Function Name="SP_LAST_TOTAL_AMOUNT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="SDATE" Type="date" Mode="In" />
           <Parameter Name="EDATE" Type="date" Mode="In" />
@@ -363,11 +327,6 @@
           <Parameter Name="SDATE" Type="date" Mode="In" />
           <Parameter Name="EDATE" Type="date" Mode="In" />
           <Parameter Name="PURPOSE" Type="int" Mode="In" />
-        </Function>
-        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-          <Parameter Name="owner_id" Type="int" Mode="In" />
-          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="SP_REPORTGIVERANDRICEVERWISE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="GIVERID" Type="int" Mode="In" />
@@ -408,7 +367,6 @@
           <Parameter Name="SDATE" Type="date" Mode="In" />
           <Parameter Name="EDATE" Type="date" Mode="In" />
         </Function>
-        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="SP_WITHDRAWGRIDVIEW" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="SP_XXXXXXXXXXXXXXXXXXX" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
       </Schema></edmx:StorageModels>
@@ -541,6 +499,11 @@
             <Parameter Name="DEPARTMENT" Mode="In" Type="Int32" />
             <Parameter Name="GENDER" Mode="In" Type="Int32" />
           </FunctionImport>
+          <FunctionImport Name="SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL" ReturnType="Collection(DORMITORYModel.SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL_Result)">
+            <Parameter Name="SDATE" Mode="In" Type="DateTime" />
+            <Parameter Name="EDATE" Mode="In" Type="DateTime" />
+            <Parameter Name="NAME" Mode="In" Type="Int32" />
+          </FunctionImport>
           <EntitySet Name="DepartmentInfoes" EntityType="DORMITORYModel.DepartmentInfo" />
           <EntitySet Name="DipositMoneyDetails" EntityType="DORMITORYModel.DipositMoneyDetail" />
           <EntitySet Name="ExpenditureDetails" EntityType="DORMITORYModel.ExpenditureDetail" />
@@ -550,7 +513,6 @@
           <EntitySet Name="SemisterInfoes" EntityType="DORMITORYModel.SemisterInfo" />
           <EntitySet Name="ShiftInfoes" EntityType="DORMITORYModel.ShiftInfo" />
           <EntitySet Name="StudentInformations" EntityType="DORMITORYModel.StudentInformation" />
-          <EntitySet Name="sysdiagrams" EntityType="DORMITORYModel.sysdiagram" />
           <AssociationSet Name="FK_StudentInformation_DepartmentInfo" Association="DORMITORYModel.FK_StudentInformation_DepartmentInfo">
             <End Role="DepartmentInfo" EntitySet="DepartmentInfoes" />
             <End Role="StudentInformation" EntitySet="StudentInformations" />
@@ -587,11 +549,6 @@
             <End Role="ShiftInfo" EntitySet="ShiftInfoes" />
             <End Role="StudentInformation" EntitySet="StudentInformations" />
           </AssociationSet>
-          <FunctionImport Name="SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL" ReturnType="Collection(DORMITORYModel.SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL_Result)">
-            <Parameter Name="SDATE" Mode="In" Type="DateTime" />
-            <Parameter Name="EDATE" Mode="In" Type="DateTime" />
-            <Parameter Name="NAME" Mode="In" Type="Int32" />
-          </FunctionImport>
           </EntityContainer>
         <ComplexType Name="SP_GRIDVIEWDISPLAY_Result">
           <Property Type="String" Name="Name" Nullable="true" MaxLength="32" />
@@ -841,6 +798,9 @@
           <Property Type="String" Name="ShiftName" Nullable="true" MaxLength="50" />
           <Property Type="String" Name="SemisterName" Nullable="true" MaxLength="50" />
         </ComplexType>
+        <ComplexType Name="SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL_Result">
+          <Property Type="Decimal" Name="Credit_Money" Nullable="true" Precision="19" />
+        </ComplexType>
         <EntityType Name="DepartmentInfo">
           <Key>
             <PropertyRef Name="DepartmentId" />
@@ -943,16 +903,6 @@
           <NavigationProperty Name="MilInfoDetails" Relationship="DORMITORYModel.FK_MilInfoDetail_StudentInformation" FromRole="StudentInformation" ToRole="MilInfoDetail" />
           <NavigationProperty Name="SemisterInfo" Relationship="DORMITORYModel.FK_StudentInformation_SemisterInfo" FromRole="StudentInformation" ToRole="SemisterInfo" />
           <NavigationProperty Name="ShiftInfo" Relationship="DORMITORYModel.FK_StudentInformation_ShiftInfo" FromRole="StudentInformation" ToRole="ShiftInfo" />
-        </EntityType>
-        <EntityType Name="sysdiagram">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Type="String" Name="name" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-          <Property Type="Int32" Name="principal_id" Nullable="false" />
-          <Property Type="Int32" Name="diagram_id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="Int32" Name="version" />
-          <Property Type="Binary" Name="definition" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <Association Name="FK_StudentInformation_DepartmentInfo">
           <End Type="DORMITORYModel.DepartmentInfo" Role="DepartmentInfo" Multiplicity="0..1" />
@@ -1062,9 +1012,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <ComplexType Name="SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL_Result">
-          <Property Type="Decimal" Name="Credit_Money" Nullable="true" Precision="19" />
-        </ComplexType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1437,6 +1384,13 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL" FunctionName="DORMITORYModel.Store.SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DORMITORYModel.SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL_Result">
+                <ScalarProperty Name="Credit_Money" ColumnName="Credit_Money" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <EntitySetMapping Name="DepartmentInfoes">
             <EntityTypeMapping TypeName="DORMITORYModel.DepartmentInfo">
               <MappingFragment StoreEntitySet="DepartmentInfo">
@@ -1531,24 +1485,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="DORMITORYModel.sysdiagram">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="definition" ColumnName="definition" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="name" ColumnName="name" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL" FunctionName="DORMITORYModel.Store.SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="DORMITORYModel.SP_DATE_AND_NAME_WISE_WITHDRAW_DETAIL_Result">
-                <ScalarProperty Name="Credit_Money" ColumnName="Credit_Money" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
           </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -1579,7 +1515,6 @@
         <EntityTypeShape EntityType="DORMITORYModel.SemisterInfo" Width="1.5" PointX="0.75" PointY="8.125" Height="1.5956835937500031" />
         <EntityTypeShape EntityType="DORMITORYModel.ShiftInfo" Width="1.5" PointX="0.75" PointY="10.375" Height="1.5956835937500031" />
         <EntityTypeShape EntityType="DORMITORYModel.StudentInformation" Width="1.5" PointX="3" PointY="3.5" Height="4.6725065104166665" />
-        <EntityTypeShape EntityType="DORMITORYModel.sysdiagram" Width="1.5" PointX="7.75" PointY="0.75" Height="1.9802864583333388" />
         <AssociationConnector Association="DORMITORYModel.FK_StudentInformation_DepartmentInfo" >
           <ConnectorPoint PointX="2.25" PointY="5.9228417968750016" />
           <ConnectorPoint PointX="3" PointY="5.9228417968750016" />
